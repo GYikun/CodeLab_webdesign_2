@@ -1,0 +1,146 @@
+[
+  {
+    "title": {
+      "en": "Touch dynamics reveal resilience in ageing",
+      "nl": "Aanraakdynamiek onthult veerkracht bij veroudering"
+    },
+    "summary": {
+      "en": "Some rhythms of everyday touchscreen use barely change across the lifespan, revealing a resilience that tests of decline miss.",
+      "nl": "Sommige ritmes van alledaags schermgebruik veranderen nauwelijks over de levensloop: een veerkracht die tests van achteruitgang missen."
+    },
+    "art": "resilience",
+    "image": "",
+    "authors": "Ceolini, Ridderinkhof & Ghosh",
+    "journal": "PNAS",
+    "year": 2024,
+    "url": "https://doi.org/10.1073/pnas.2311865121"
+  },
+  {
+    "title": {
+      "en": "Multi-day rhythms hide in smartphone use",
+      "nl": "Meerdaagse ritmes verscholen in smartphonegebruik"
+    },
+    "summary": {
+      "en": "Beyond the 24-hour clock, phone behaviour cycles over several days, in rhythms shared across people.",
+      "nl": "Voorbij de klok van 24 uur kent telefoongedrag cycli van meerdere dagen, met ritmes die mensen met elkaar delen."
+    },
+    "art": "multiday",
+    "image": "",
+    "authors": "Ceolini & Ghosh",
+    "journal": "npj Digital Medicine",
+    "year": 2023,
+    "url": "https://doi.org/10.1038/s41746-023-00799-7"
+  },
+  {
+    "title": {
+      "en": "A purposeful tap is not just a movement",
+      "nl": "Een doelgerichte tik is meer dan een beweging"
+    },
+    "summary": {
+      "en": "The brain engages far more in a purposeful touch than in a similar idle thumb movement, even in natural phone use.",
+      "nl": "Het brein is veel sterker betrokken bij een doelgerichte aanraking dan bij een vergelijkbare doelloze duimbeweging, ook bij natuurlijk telefoongebruik."
+    },
+    "art": "goal",
+    "image": "",
+    "authors": "Kock, Ceolini, Groenewelen & Ghosh",
+    "journal": "NeuroImage: Reports",
+    "year": 2023,
+    "url": "https://doi.org/10.1016/j.ynirp.2023.100164"
+  },
+  {
+    "title": {
+      "en": "Smartphone data flags neurological disease",
+      "nl": "Smartphonedata signaleert neurologische aandoeningen"
+    },
+    "summary": {
+      "en": "Everyday phone use yields a behavioural age, and neurological disease shows up as an older one.",
+      "nl": "Alledaags telefoongebruik levert een gedragsleeftijd op, en een neurologische aandoening toont zich als een hogere."
+    },
+    "art": "behavioural-age",
+    "image": "",
+    "authors": "Ceolini, Brunner, Bunschoten, Majoie, Thijs & Ghosh",
+    "journal": "iScience",
+    "year": 2022,
+    "url": "https://doi.org/10.1016/j.isci.2022.104792"
+  },
+  {
+    "title": {
+      "en": "Busy phone moments sharpen hearing in the brain",
+      "nl": "Drukke telefoonmomenten scherpen het horen in het brein"
+    },
+    "summary": {
+      "en": "When smartphone use briefly intensifies, the brain responds more strongly to background sounds.",
+      "nl": "Wanneer smartphonegebruik even toeneemt, reageert het brein sterker op achtergrondgeluiden."
+    },
+    "art": "sound",
+    "image": "",
+    "authors": "van de Ruit & Ghosh",
+    "journal": "NeuroImage: Reports",
+    "year": 2022,
+    "url": "https://doi.org/10.1016/j.ynirp.2022.100131"
+  },
+  {
+    "title": {
+      "en": "AI detects epilepsy from touch behaviour alone",
+      "nl": "AI herkent epilepsie enkel aan aanraakgedrag"
+    },
+    "summary": {
+      "en": "A neural network reading only touchscreen behaviour traces epileptiform brain activity, without electrodes.",
+      "nl": "Een neuraal netwerk dat alleen aanraakgedrag leest, volgt epileptiforme hersenactiviteit, zonder elektroden."
+    },
+    "art": "epilepsy",
+    "image": "",
+    "authors": "Duckrow, Ceolini, Zaveri, Brooks & Ghosh",
+    "journal": "iScience",
+    "year": 2021,
+    "url": "https://doi.org/10.1016/j.isci.2021.102538"
+  },
+  {
+    "title": {
+      "en": "Sleep behaviour has a stable, personal signature",
+      "nl": "Slaapgedrag heeft een stabiele, persoonlijke signatuur"
+    },
+    "summary": {
+      "en": "Wearables, phone use and self-reports together reveal a sleep pattern that stays stable for each person.",
+      "nl": "Wearables, telefoongebruik en zelfrapportage samen onthullen een slaappatroon dat voor ieder persoon stabiel blijft."
+    },
+    "art": "sleep",
+    "image": "",
+    "authors": "Massar, Chua, Soon, Ng, Ong, Chee, Lee, Ghosh & Chee",
+    "journal": "npj Digital Medicine",
+    "year": 2021,
+    "url": "https://doi.org/10.1038/s41746-021-00466-9"
+  },
+  {
+    "title": {
+      "en": "Dopamine capacity mirrors social phone use",
+      "nl": "Dopaminecapaciteit weerspiegelt sociaal telefoongebruik"
+    },
+    "summary": {
+      "en": "The brain's capacity to make dopamine is mirrored in how socially active people are on their phones.",
+      "nl": "Het vermogen van het brein om dopamine aan te maken weerspiegelt zich in hoe sociaal actief mensen op hun telefoon zijn."
+    },
+    "art": "dopamine",
+    "image": "",
+    "authors": "Westbrook, Ghosh, van den Bosch, Määttä, Hofmans & Cools",
+    "journal": "iScience",
+    "year": 2021,
+    "url": "https://doi.org/10.1016/j.isci.2021.102497"
+  },
+  {
+    "title": {
+      "en": "Touchscreens reshape the brain's map of the fingertips",
+      "nl": "Touchscreens hervormen de vingertoppen in het brein"
+    },
+    "summary": {
+      "en": "Touchscreen use changes how the brain processes touch from the fingertips, and the change tracks recent use.",
+      "nl": "Touchscreengebruik verandert hoe het brein aanraking van de vingertoppen verwerkt, en die verandering volgt het recente gebruik."
+    },
+    "art": "plasticity",
+    "image": "",
+    "authors": "Gindrat, Chytiris, Balerna, Rouiller & Ghosh",
+    "journal": "Current Biology",
+    "year": 2015,
+    "url": "https://doi.org/10.1016/j.cub.2014.11.026"
+  }
+]

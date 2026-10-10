@@ -1,0 +1,58 @@
+[
+  {
+    "time": "2014",
+    "status": "normal",
+    "text": {
+      "en": "WIRED covers the smartphone-shaped brain",
+      "nl": "WIRED bericht over het door smartphones gevormde brein"
+    }
+  },
+  {
+    "time": "2019",
+    "status": "normal",
+    "text": {
+      "en": "First sleep-wake cycles captured from smartphone taps",
+      "nl": "Eerste slaap-waakcycli vastgelegd via smartphonetikken"
+    }
+  },
+  {
+    "time": "2021",
+    "status": "normal",
+    "text": {
+      "en": "The Guardian names the field “tappigraphy”",
+      "nl": "The Guardian noemt het veld “tappigraphy”"
+    }
+  },
+  {
+    "time": "2022",
+    "status": "normal",
+    "text": {
+      "en": "AI traces ageing and disease in touch dynamics",
+      "nl": "AI traceert veroudering en ziekte in aanraakpatronen"
+    }
+  },
+  {
+    "time": "2023",
+    "status": "normal",
+    "text": {
+      "en": "Multi-day rhythms found in smartphone use",
+      "nl": "Meerdaagse ritmes ontdekt in smartphonegebruik"
+    }
+  },
+  {
+    "time": "",
+    "status": "today",
+    "text": {
+      "en": "Neural implants and smartphone data combined",
+      "nl": "Hersenimplantaten en smartphonedata gecombineerd"
+    }
+  },
+  {
+    "time": "",
+    "status": "future",
+    "text": {
+      "en": "Spin-offs bring findings into the clinic",
+      "nl": "Spin-offs brengen bevindingen naar de kliniek"
+    }
+  }
+]

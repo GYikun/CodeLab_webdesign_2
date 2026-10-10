@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources · CODELAB — Leiden University</title>
+<meta name="description" content="CODELAB's open datasets, code, spin-off companies and publications — freely available to the research community.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231f5ae0'/></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="CODELAB, Leiden University">
+      <span class="brand-name"><strong>Code</strong>Lab</span>
+      <span class="brand-sub" data-i18n="brandSub">Leiden University</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="discoveries.html" data-i18n="navMethods">Discoveries</a>
+        <a href="research.html" data-i18n="navQuestions">Research</a>
+        <a href="partners.html" data-i18n="navPartners">Partners</a>
+        <a href="team.html" data-i18n="navTeam">Team</a>
+        <a href="resources.html" class="is-active" data-i18n="navResources">Resources</a>
+      </nav>
+
+    <div class="header-controls">
+      <a href="https://www.universiteitleiden.nl/en/staffmembers/arko-ghosh" class="btn btn-primary btn-sm nav-cta" data-i18n="navJoin">Join a Study</a>
+
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="nl" type="button">NL</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- RESOURCES: Publications → Patents → Data → Code
+     Cards are filled from data/team.json (Scholar/ORCID links) and data/resources.json -->
+<section class="resources-section">
+  <div class="wrap">
+
+    <div class="res-block" id="publications">
+      <div class="res-head reveal">
+        <div class="res-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></div>
+        <div>
+          <h2 class="res-title" data-i18n="pubsTitle">Publications</h2>
+          <p class="res-sub" data-i18n="pubsSub">Find our papers on our researchers’ academic profiles.</p>
+        </div>
+      </div>
+      <div class="resource-grid"></div>
+    </div>
+
+    <div class="res-block" id="patents">
+      <div class="res-head reveal">
+        <div class="res-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M9 14.2 7.5 22l4.5-2.5 4.5 2.5-1.5-7.8"/><path d="m9.8 9 1.5 1.5 3-3"/></svg></div>
+        <div>
+          <h2 class="res-title" data-i18n="patentsTitle">Patents</h2>
+          <p class="res-sub" data-i18n="patentsSub">Inventions that have come out of our research.</p>
+        </div>
+      </div>
+      <div class="resource-grid"></div>
+    </div>
+
+    <div class="res-block" id="data">
+      <div class="res-head reveal">
+        <div class="res-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+        <div>
+          <h2 class="res-title" data-i18n="dataTitle">Data</h2>
+          <p class="res-sub" data-i18n="dataSub">Datasets we have made openly available.</p>
+        </div>
+      </div>
+      <div class="resource-grid"></div>
+    </div>
+
+    <div class="res-block" id="code">
+      <div class="res-head reveal">
+        <div class="res-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg></div>
+        <div>
+          <h2 class="res-title" data-i18n="codeTitle">Code</h2>
+          <p class="res-sub" data-i18n="codeSub">Open-source code from our projects.</p>
+        </div>
+      </div>
+      <div class="resource-grid"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-brand"><strong>Code</strong>Lab</span>
+      <span class="footer-sub" data-i18n="brandSub">Leiden University</span>
+    </div>
+    <p class="footer-note">© <span id="year">2026</span> <span data-i18n="footerNote">CODELAB, Leiden University. Wassenaarseweg 52, Leiden.</span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+var pageText = {
+  en: {
+    pubsTitle: "Publications",
+    pubsSub: "Find our papers on our researchers’ academic profiles.",
+    srcScholar: "Google Scholar",
+    scholarDesc: "Full list of papers and citations.",
+    srcOrcid: "ORCID",
+    orcidDesc: "Publications and other research output.",
+    viewProfile: "View profile <span class=\"arrow\">→</span>",
+    patentsTitle: "Patents",
+    patentsSub: "Inventions that have come out of our research.",
+    srcPatents: "Google Patents",
+    viewPatents: "View on Google Patents <span class=\"arrow\">→</span>",
+    dataTitle: "Data",
+    dataSub: "Datasets we have made openly available.",
+    srcDataverse: "Data repository",
+    viewDataset: "Browse datasets <span class=\"arrow\">→</span>",
+    codeTitle: "Code",
+    codeSub: "Open-source code from our projects.",
+    srcGithub: "GitHub",
+    viewGithub: "View on GitHub <span class=\"arrow\">→</span>"
+  },
+  nl: {
+    pubsTitle: "Publicaties",
+    pubsSub: "Vind onze artikelen op de academische profielen van onze onderzoekers.",
+    srcScholar: "Google Scholar",
+    scholarDesc: "Volledige lijst van artikelen en citaties.",
+    srcOrcid: "ORCID",
+    orcidDesc: "Publicaties en andere onderzoeksoutput.",
+    viewProfile: "Bekijk profiel <span class=\"arrow\">→</span>",
+    patentsTitle: "Octrooien",
+    patentsSub: "Uitvindingen die uit ons onderzoek zijn voortgekomen.",
+    srcPatents: "Google Patents",
+    viewPatents: "Bekijk op Google Patents <span class=\"arrow\">→</span>",
+    dataTitle: "Data",
+    dataSub: "Datasets die we openbaar beschikbaar hebben gemaakt.",
+    srcDataverse: "Datarepository",
+    viewDataset: "Bekijk datasets <span class=\"arrow\">→</span>",
+    codeTitle: "Code",
+    codeSub: "Opensourcecode uit onze projecten.",
+    srcGithub: "GitHub",
+    viewGithub: "Bekijk op GitHub <span class=\"arrow\">→</span>"
+  }
+};
+
+/* resources.json "type" -> page section, card label and button text (all in pageText) */
+var RESOURCE_TYPES = {
+  patent: { block: 'patents', label: 'srcPatents',   button: 'viewPatents' },
+  data:   { block: 'data',    label: 'srcDataverse', button: 'viewDataset' },
+  code:   { block: 'code',    label: 'srcGithub',    button: 'viewGithub' }
+};
+
+CodeLabData.load(['team', 'resources']).then(function (data) {
+  var D = CodeLabData;
+  function grid(block) { return document.querySelector('#' + block + ' .resource-grid'); }
+  function card(url, labelKey, nameHtml, descHtml, buttonKey, i) {
+    return '<a class="resource-card reveal"' + (i ? ' data-delay="' + Math.min(i, 7) + '"' : '') +
+      ' href="' + D.esc(url) + '" target="_blank" rel="noopener">' +
+      '<span class="resource-type" data-i18n="' + labelKey + '"></span>' +
+      '<p class="resource-name"' + nameHtml + '</p>' +
+      '<p class="resource-desc"' + descHtml + '</p>' +
+      '<span class="resource-link" data-i18n="' + buttonKey + '"></span></a>';
+  }
+  /* Fill a section; a section with nothing to show is removed (no empty heading or divider). */
+  function fill(block, cards) {
+    if (cards.length) grid(block).innerHTML = cards.join('');
+    else document.getElementById(block).remove();
+  }
+
+  /* Publications: every team member's Google Scholar / ORCID link */
+  if (!data.team) {
+    D.showError(grid('publications'));
+  } else {
+    var pubs = [];
+    data.team.forEach(function (m) {
+      var name = '>' + D.esc(m.name);
+      if (m.scholar) pubs.push(card(m.scholar, 'srcScholar', name, ' data-i18n="scholarDesc">', 'viewProfile', pubs.length));
+      if (m.orcid) pubs.push(card(m.orcid, 'srcOrcid', name, ' data-i18n="orcidDesc">', 'viewProfile', pubs.length));
+    });
+    fill('publications', pubs);
+  }
+
+  /* Patents, data, code */
+  Object.keys(RESOURCE_TYPES).forEach(function (type) {
+    var t = RESOURCE_TYPES[type];
+    if (!data.resources) { D.showError(grid(t.block)); return; }
+    fill(t.block, data.resources.filter(function (r) { return r.type === type; }).map(function (r, i) {
+      var key = type + i;
+      return card(r.url, t.label,
+        ' data-i18n="' + D.addText(pageText, key + 'Name', r.name) + '">',
+        ' data-i18n="' + D.addText(pageText, key + 'Desc', r.summary) + '">', t.button, i);
+    }));
+  });
+
+  initSite(pageText);
+});
+</script>
+</body>
+</html>

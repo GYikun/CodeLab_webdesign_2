@@ -1,0 +1,30 @@
+{
+  "title": {
+    "en": "Fundamental questions from",
+    "nl": "Fundamentele vragen uit"
+  },
+  "highlight": {
+    "en": "the patterns of everyday behaviour",
+    "nl": "de patronen van alledaags gedrag"
+  },
+  "intro": {
+    "en": "",
+    "nl": ""
+  },
+  "frameworkTitle": {
+    "en": "One map of behaviour",
+    "nl": "Eén kaart van gedrag"
+  },
+  "frameworkText": {
+    "en": "Each touch on a phone is a moment when the flow of behaviour crosses the screen. Plotting every interval between touches against the next builds a map of how behaviour unfolds.",
+    "nl": "Elke aanraking van een telefoon is een moment waarop de stroom van gedrag het scherm kruist. Door elk interval tussen aanrakingen uit te zetten tegen het volgende ontstaat een kaart van hoe gedrag zich ontvouwt."
+  },
+  "flowCaption": {
+    "en": "The flow of behaviour. Each crossing of the screen is a touch.",
+    "nl": "De stroom van gedrag. Elke kruising van het scherm is een aanraking."
+  },
+  "mapCaption": {
+    "en": "Each interval (across) against the next (up).",
+    "nl": "Elk interval (horizontaal) tegen het volgende (verticaal)."
+  }
+}

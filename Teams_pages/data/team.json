@@ -1,0 +1,761 @@
+[
+  {
+    "id": "arko-ghosh",
+    "name": "Arko Ghosh",
+    "role": {
+      "en": "Assistant Professor · Principal Investigator",
+      "nl": "Universitair docent · Hoofdonderzoeker"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "brain-behaviour",
+    "scholar": "https://scholar.google.com/citations?user=W8koQUgAAAAJ&hl=en",
+    "orcid": "",
+    "sample": false,
+    "timeline": [
+      {
+        "time": "2014",
+        "text": {
+          "en": "WIRED covers the smartphone-shaped brain",
+          "nl": "WIRED bericht over het door smartphones gevormde brein"
+        },
+        "detailTitle": {
+          "en": "The smartphone-shaped brain reaches the public",
+          "nl": "Het door smartphones gevormde brein bereikt het publiek"
+        },
+        "detail": {
+          "en": "Early work showing that everyday touchscreen use leaves a measurable imprint on the sensory cortex. WIRED’s coverage brought the idea out of the lab and started the conversation this group has been having ever since.",
+          "nl": "Vroeg werk dat liet zien dat alledaags touchscreengebruik een meetbare afdruk achterlaat in de sensorische cortex. De berichtgeving van WIRED haalde het idee uit het lab en startte het gesprek dat deze groep sindsdien voert."
+        }
+      },
+      {
+        "time": "2016",
+        "text": {
+          "en": "QuantActions AG founded",
+          "nl": "QuantActions AG opgericht"
+        },
+        "detailTitle": {
+          "en": "First spin-off",
+          "nl": "Eerste spin-off"
+        },
+        "detail": {
+          "en": "The first attempt to turn smartphone interaction data into a usable digital biomarker outside an academic setting.",
+          "nl": "De eerste poging om smartphone-interactiedata om te zetten in een bruikbare digitale biomarker buiten een academische omgeving."
+        }
+      },
+      {
+        "time": "2019",
+        "text": {
+          "en": "Sleep-wake cycles read from taps",
+          "nl": "Slaap-waakcycli afgelezen uit tikken"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "2021",
+        "text": {
+          "en": "The Guardian names the field “tappigraphy”",
+          "nl": "The Guardian noemt het veld “tappigraphy”"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "2023",
+        "text": {
+          "en": "Multi-day rhythms found in phone use",
+          "nl": "Meerdaagse ritmes ontdekt in telefoongebruik"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "2024",
+        "text": {
+          "en": "AXITE BV founded",
+          "nl": "AXITE BV opgericht"
+        },
+        "detailTitle": {
+          "en": "From discovery to the clinic",
+          "nl": "Van ontdekking naar de kliniek"
+        },
+        "detail": {
+          "en": "A second spin-off, this time aimed squarely at clinical brain-health monitoring rather than general-purpose biomarkers.",
+          "nl": "Een tweede spin-off, ditmaal specifiek gericht op klinische monitoring van hersengezondheid in plaats van algemene biomarkers."
+        }
+      }
+    ],
+    "tag": "Principal Investigator"
+  },
+  {
+    "id": "guido-band",
+    "name": "Guido Band",
+    "role": {
+      "en": "Associate Professor · Teaching-focused mentor",
+      "nl": "Universitair hoofddocent · Onderwijsgerichte mentor"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "brain-behaviour",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "Cognitive control and error monitoring",
+          "nl": "Cognitieve controle en foutmonitoring"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Joins CODELAB as teaching-focused mentor",
+          "nl": "Sluit zich aan bij CODELAB als onderwijsgerichte mentor"
+        },
+        "detailTitle": {
+          "en": "Why a second mentor",
+          "nl": "Waarom een tweede mentor"
+        },
+        "detail": {
+          "en": "The group runs two senior mentors side by side — one for research, one for teaching — so that a first-year student and a postdoc can both find a way in.",
+          "nl": "De groep werkt met twee senior mentoren naast elkaar — één voor onderzoek, één voor onderwijs — zodat zowel een eerstejaars als een postdoc een ingang vindt."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Supervises first tappigraphy theses",
+          "nl": "Begeleidt eerste tappigraphy-scripties"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "Researcher"
+  },
+  {
+    "id": "khrystyna-semkiv",
+    "name": "Khrystyna Semkiv",
+    "role": {
+      "en": "PhD Candidate",
+      "nl": "Promovendus"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "brain-disorders",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "MSc in cognitive neuroscience",
+          "nl": "MSc in cognitieve neurowetenschap"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Ballet years — measuring her own knee-jerk reflex",
+          "nl": "Balletjaren — haar eigen kniepeesreflex meten"
+        },
+        "detailTitle": {
+          "en": "Where the interest actually started",
+          "nl": "Waar de interesse werkelijk begon"
+        },
+        "detail": {
+          "en": "Years of ballet training, and a stubborn curiosity about why the same reflex test gave different answers before and after rehearsal. Not a publication — but the reason the rest of this timeline exists.",
+          "nl": "Jarenlange balletopleiding, en een hardnekkige nieuwsgierigheid naar waarom dezelfde reflextest vóór en ná de repetitie andere antwoorden gaf. Geen publicatie — maar wel de reden dat de rest van deze tijdlijn bestaat."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Starts PhD at CODELAB",
+          "nl": "Start promotieonderzoek bij CODELAB"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "First clinical data collection",
+          "nl": "Eerste klinische dataverzameling"
+        },
+        "detailTitle": {
+          "en": "Working inside the clinic",
+          "nl": "Werken binnen de kliniek"
+        },
+        "detail": {
+          "en": "Collecting touchscreen data alongside clinical recordings means fitting research around care, not the other way round — the slowest and most instructive part of the project so far.",
+          "nl": "Touchscreendata verzamelen naast klinische metingen betekent onderzoek inpassen rond de zorg, niet andersom — tot nu toe het traagste en leerzaamste deel van het project."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Thesis in progress",
+          "nl": "Proefschrift in wording"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "Researcher"
+  },
+  {
+    "id": "wenyu-wan",
+    "name": "Wenyu Wan",
+    "role": {
+      "en": "Guest researcher",
+      "nl": "Gastonderzoeker"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "lifetime",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "Background in ageing research",
+          "nl": "Achtergrond in ouderdomsonderzoek"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Joins CODELAB as guest researcher",
+          "nl": "Sluit zich aan bij CODELAB als gastonderzoeker"
+        },
+        "detailTitle": {
+          "en": "A visiting perspective",
+          "nl": "Een blik van buiten"
+        },
+        "detail": {
+          "en": "Guest researchers bring methods the group does not already own. Placeholder text — replace with the visit’s actual focus.",
+          "nl": "Gastonderzoekers brengen methoden mee die de groep nog niet in huis heeft. Plaatsaanduiding — vervang door de werkelijke focus van het bezoek."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Behavioural-age modelling",
+          "nl": "Modellering van gedragsleeftijd"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "Visiting Researcher"
+  },
+  {
+    "id": "ruchella-kock",
+    "name": "Ruchella Kock",
+    "role": {
+      "en": "Guest researcher",
+      "nl": "Gastonderzoeker"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "patterns-over-time",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "Time-series methods",
+          "nl": "Tijdreeksmethoden"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Hidden rhythms in everyday behaviour",
+          "nl": "Verborgen ritmes in alledaags gedrag"
+        },
+        "detailTitle": {
+          "en": "Looking past the 24-hour day",
+          "nl": "Voorbij de 24-uursdag kijken"
+        },
+        "detail": {
+          "en": "Most behavioural work stops at the daily cycle. Placeholder text — replace with a short account of the multi-day rhythm work.",
+          "nl": "Het meeste gedragsonderzoek stopt bij de dagelijkse cyclus. Plaatsaanduiding — vervang door een korte beschrijving van het meerdaagse-ritmeonderzoek."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Guest researcher at CODELAB",
+          "nl": "Gastonderzoeker bij CODELAB"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "Visiting Researcher"
+  },
+  {
+    "id": "fleur-van-der-laan",
+    "name": "Fleur van der Laan",
+    "role": {
+      "en": "Education and Research Assistant",
+      "nl": "Onderwijs- en onderzoeksassistent"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "BSc psychology, Leiden",
+          "nl": "BSc psychologie, Leiden"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Runs participant recruitment",
+          "nl": "Verzorgt de werving van deelnemers"
+        },
+        "detailTitle": {
+          "en": "The people behind the data",
+          "nl": "De mensen achter de data"
+        },
+        "detail": {
+          "en": "Every tap in the dataset belongs to someone who agreed to share it. Placeholder text — replace with a note on how recruitment and consent actually run.",
+          "nl": "Elke tik in de dataset is van iemand die ermee instemde die te delen. Plaatsaanduiding — vervang door een notitie over hoe werving en toestemming werkelijk verlopen."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Education and research assistant",
+          "nl": "Onderwijs- en onderzoeksassistent"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "Researcher"
+  },
+  {
+    "id": "sezin-mumcu",
+    "name": "Sezin Mumcu",
+    "role": {
+      "en": "Team member",
+      "nl": "Teamlid"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "patterns-over-time",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "Joins the group",
+          "nl": "Sluit zich aan bij de groep"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Sleep and wearable data",
+          "nl": "Slaap- en wearabledata"
+        },
+        "detailTitle": {
+          "en": "Two instruments, one night",
+          "nl": "Twee instrumenten, één nacht"
+        },
+        "detail": {
+          "en": "Placeholder text — replace with a short account of combining wearables with touchscreen activity.",
+          "nl": "Plaatsaanduiding — vervang door een korte beschrijving van het combineren van wearables met touchscreenactiviteit."
+        }
+      }
+    ],
+    "tag": "Researcher"
+  },
+  {
+    "id": "david-hof",
+    "name": "David Hof",
+    "role": {
+      "en": "MSc thesis student",
+      "nl": "Masterstudent (scriptie)"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "patterns-over-time",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "BSc psychology",
+          "nl": "BSc psychologie"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "MSc thesis: rhythms in phone use",
+          "nl": "MSc-scriptie: ritmes in telefoongebruik"
+        },
+        "detailTitle": {
+          "en": "The thesis question",
+          "nl": "De scriptievraag"
+        },
+        "detail": {
+          "en": "Placeholder text — replace with one or two sentences on what the thesis is actually asking.",
+          "nl": "Plaatsaanduiding — vervang door een of twee zinnen over wat de scriptie werkelijk onderzoekt."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Defence expected",
+          "nl": "Verdediging verwacht"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "MSc Student"
+  },
+  {
+    "id": "oyku-gurcan",
+    "name": "Öykü Gürcan",
+    "role": {
+      "en": "MSc thesis student",
+      "nl": "Masterstudent (scriptie)"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "brain-disorders",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "BSc psychology",
+          "nl": "BSc psychologie"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "MSc thesis: touch data and disease markers",
+          "nl": "MSc-scriptie: aanraakdata en ziektemarkers"
+        },
+        "detailTitle": {
+          "en": "The thesis question",
+          "nl": "De scriptievraag"
+        },
+        "detail": {
+          "en": "Placeholder text — replace with one or two sentences on what the thesis is actually asking.",
+          "nl": "Plaatsaanduiding — vervang door een of twee zinnen over wat de scriptie werkelijk onderzoekt."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Defence expected",
+          "nl": "Verdediging verwacht"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": "MSc Student"
+  },
+  {
+    "id": "alumnus-sample-01",
+    "name": "Sample Alumnus 01",
+    "role": {
+      "en": "Alumnus · project complete",
+      "nl": "Alumnus · project afgerond"
+    },
+    "status": "alumni",
+    "joined": "",
+    "photo": "",
+    "topic": "lifetime",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "Joins as MSc student",
+          "nl": "Start als MSc-student"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Thesis on ageing and touch dynamics",
+          "nl": "Scriptie over veroudering en aanraakdynamiek"
+        },
+        "detailTitle": {
+          "en": "What the project left behind",
+          "nl": "Wat het project heeft nagelaten"
+        },
+        "detail": {
+          "en": "Placeholder text — replace with the finished project and where the person went next.",
+          "nl": "Plaatsaanduiding — vervang door het afgeronde project en waar de persoon daarna heen ging."
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Project complete — leaves the group",
+          "nl": "Project afgerond — verlaat de groep"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": [
+      "Alumni",
+      "Researcher"
+    ]
+  },
+  {
+    "id": "alumnus-sample-02",
+    "name": "Sample Alumnus 02",
+    "role": {
+      "en": "Alumnus · project complete",
+      "nl": "Alumnus · project afgerond"
+    },
+    "status": "alumni",
+    "joined": "",
+    "photo": "",
+    "topic": "patterns-over-time",
+    "scholar": "",
+    "orcid": "",
+    "sample": true,
+    "timeline": [
+      {
+        "time": "",
+        "text": {
+          "en": "Joins as research assistant",
+          "nl": "Start als onderzoeksassistent"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Sleep data pipeline",
+          "nl": "Pijplijn voor slaapdata"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      },
+      {
+        "time": "",
+        "text": {
+          "en": "Project complete — leaves the group",
+          "nl": "Project afgerond — verlaat de groep"
+        },
+        "detailTitle": {
+          "en": "",
+          "nl": ""
+        },
+        "detail": {
+          "en": "",
+          "nl": ""
+        }
+      }
+    ],
+    "tag": [
+      "Alumni",
+      "Researcher"
+    ]
+  }
+]

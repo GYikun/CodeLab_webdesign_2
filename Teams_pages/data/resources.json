@@ -1,0 +1,50 @@
+[
+  {
+    "type": "patent",
+    "name": {
+      "en": "Patents by Arko Ghosh",
+      "nl": "Octrooien van Arko Ghosh"
+    },
+    "summary": {
+      "en": "Patents and patent applications that list Arko Ghosh as inventor.",
+      "nl": "Octrooien en octrooiaanvragen met Arko Ghosh als uitvinder."
+    },
+    "url": "https://patents.google.com/?inventor=Arko+Ghosh"
+  },
+  {
+    "type": "data",
+    "name": {
+      "en": "Dataverse NL",
+      "nl": "Dataverse NL"
+    },
+    "summary": {
+      "en": "Where we share our published datasets. Email us if you need more data than what's public.",
+      "nl": "Waar we onze gepubliceerde datasets delen. Mail ons als je meer data nodig hebt dan hier openbaar is."
+    },
+    "url": "https://dataverse.nl/"
+  },
+  {
+    "type": "code",
+    "name": {
+      "en": "Ageing & disease projects",
+      "nl": "Projecten over veroudering & ziekte"
+    },
+    "summary": {
+      "en": "Open-source code for our smartphone-based ageing and neurological disease research.",
+      "nl": "Opensourcecode voor ons onderzoek naar veroudering en neurologische aandoeningen op basis van smartphonedata."
+    },
+    "url": "https://github.com/codelableidenvelux"
+  },
+  {
+    "type": "code",
+    "name": {
+      "en": "All other CODELAB projects",
+      "nl": "Alle overige CODELAB-projecten"
+    },
+    "summary": {
+      "en": "The rest of our published code, covering sleep, sensorimotor dynamics and more.",
+      "nl": "De rest van onze gepubliceerde code, over slaap, sensomotorische dynamiek en meer."
+    },
+    "url": "https://github.com/CODELABLEIDEN"
+  }
+]

@@ -1,0 +1,327 @@
+[
+  {
+    "name": {
+      "en": "SEIN",
+      "nl": "SEIN"
+    },
+    "short": "SEIN",
+    "group": "research",
+    "location": {
+      "en": "Heemstede",
+      "nl": "Heemstede"
+    },
+    "themes": [
+      "epilepsy"
+    ],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://www.sein.nl/"
+  },
+  {
+    "name": {
+      "en": "Yale School of Medicine",
+      "nl": "Yale School of Medicine"
+    },
+    "short": "Yale",
+    "group": "research",
+    "location": {
+      "en": "USA",
+      "nl": "VS"
+    },
+    "themes": [
+      "epilepsy",
+      "brain-recordings"
+    ],
+    "focus": {
+      "en": "Invasive EEG recordings",
+      "nl": "Invasieve EEG-metingen"
+    },
+    "founded": null,
+    "url": "https://medicine.yale.edu/"
+  },
+  {
+    "name": {
+      "en": "University Children's Hospital Zurich",
+      "nl": "Universitair Kinderziekenhuis Zürich"
+    },
+    "short": "Kinderspital Zürich",
+    "group": "research",
+    "location": {
+      "en": "Switzerland",
+      "nl": "Zwitserland"
+    },
+    "themes": [
+      "sleep",
+      "adolescence"
+    ],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://www.kispi.uzh.ch/"
+  },
+  {
+    "name": {
+      "en": "National University of Singapore",
+      "nl": "National University of Singapore"
+    },
+    "short": "NUS",
+    "group": "research",
+    "location": {
+      "en": "Singapore",
+      "nl": "Singapore"
+    },
+    "themes": [
+      "sleep"
+    ],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://www.nus.edu.sg/"
+  },
+  {
+    "name": {
+      "en": "University of Amsterdam",
+      "nl": "Universiteit van Amsterdam"
+    },
+    "short": "UvA",
+    "group": "research",
+    "location": {
+      "en": "Amsterdam",
+      "nl": "Amsterdam"
+    },
+    "themes": [
+      "ageing"
+    ],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://www.uva.nl/en"
+  },
+  {
+    "name": {
+      "en": "Rutgers University",
+      "nl": "Rutgers University"
+    },
+    "short": "Rutgers",
+    "group": "research",
+    "location": {
+      "en": "USA",
+      "nl": "VS"
+    },
+    "themes": [
+      "ageing"
+    ],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://www.rutgers.edu/"
+  },
+  {
+    "name": {
+      "en": "AdventHealth",
+      "nl": "AdventHealth"
+    },
+    "short": "AdventHealth",
+    "group": "research",
+    "location": {
+      "en": "USA",
+      "nl": "VS"
+    },
+    "themes": [
+      "physical-activity"
+    ],
+    "focus": {
+      "en": "Physical activity, starting now",
+      "nl": "Lichamelijke activiteit, net gestart"
+    },
+    "founded": null,
+    "url": "https://www.adventhealth.com/"
+  },
+  {
+    "name": {
+      "en": "Wageningen University & Research",
+      "nl": "Wageningen University & Research"
+    },
+    "short": "Wageningen",
+    "group": "research",
+    "location": {
+      "en": "Wageningen",
+      "nl": "Wageningen"
+    },
+    "themes": [
+      "complex-systems"
+    ],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://www.wur.nl/en"
+  },
+  {
+    "name": {
+      "en": "Champalimaud Foundation",
+      "nl": "Champalimaud Foundation"
+    },
+    "short": "Champalimaud",
+    "group": "research",
+    "location": {
+      "en": "Portugal",
+      "nl": "Portugal"
+    },
+    "themes": [
+      "cognition",
+      "rehabilitation"
+    ],
+    "focus": {
+      "en": "Cognition and rehabilitation interventions",
+      "nl": "Cognitie en revalidatie-interventies"
+    },
+    "founded": null,
+    "url": "https://www.fchampalimaud.org/"
+  },
+  {
+    "name": {
+      "en": "NWO",
+      "nl": "NWO"
+    },
+    "short": "",
+    "group": "funder",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "Dutch Research Council",
+      "nl": "Nederlandse Organisatie voor Wetenschappelijk Onderzoek"
+    },
+    "founded": null,
+    "url": "https://www.nwo.nl/en"
+  },
+  {
+    "name": {
+      "en": "Society in Science",
+      "nl": "Society in Science"
+    },
+    "short": "",
+    "group": "funder",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "Branco Weiss Fellowship",
+      "nl": "Branco Weiss Fellowship"
+    },
+    "founded": null,
+    "url": "https://brancoweissfellowship.org/"
+  },
+  {
+    "name": {
+      "en": "Velux Stiftung",
+      "nl": "Velux Stiftung"
+    },
+    "short": "",
+    "group": "funder",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://veluxstiftung.ch/"
+  },
+  {
+    "name": {
+      "en": "Health~Holland",
+      "nl": "Health~Holland"
+    },
+    "short": "",
+    "group": "funder",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "Through the BRAINS consortium",
+      "nl": "Via het BRAINS-consortium"
+    },
+    "founded": null,
+    "url": "https://www.health-holland.com/"
+  },
+  {
+    "name": {
+      "en": "EpilepsieNL",
+      "nl": "EpilepsieNL"
+    },
+    "short": "",
+    "group": "funder",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": null,
+    "url": "https://epilepsie.nl/"
+  },
+  {
+    "name": {
+      "en": "QuantActions AG",
+      "nl": "QuantActions AG"
+    },
+    "short": "",
+    "group": "spinoff",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": 2016,
+    "url": "https://www.quantactions.com/"
+  },
+  {
+    "name": {
+      "en": "AXITE BV",
+      "nl": "AXITE BV"
+    },
+    "short": "",
+    "group": "spinoff",
+    "location": {
+      "en": "",
+      "nl": ""
+    },
+    "themes": [],
+    "focus": {
+      "en": "",
+      "nl": ""
+    },
+    "founded": 2024,
+    "url": "https://axitetech.com/"
+  }
+]

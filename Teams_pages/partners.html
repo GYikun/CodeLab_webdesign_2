@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Partners · CODELAB — Leiden University</title>
+<meta name="description" content="CODELAB's neuroscience and clinical partners across three continents, from Leiden to Yale to Tokyo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231f5ae0'/></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="CODELAB, Leiden University">
+      <span class="brand-name"><strong>Code</strong>Lab</span>
+      <span class="brand-sub" data-i18n="brandSub">Leiden University</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="discoveries.html" data-i18n="navMethods">Discoveries</a>
+        <a href="research.html" data-i18n="navQuestions">Questions</a>
+        <a href="partners.html" class="is-active" data-i18n="navPartners">Partners</a>
+        <a href="team.html" data-i18n="navTeam">Team</a>
+        <a href="resources.html" data-i18n="navResources">Resources</a>
+      </nav>
+
+    <div class="header-controls">
+      <a href="https://www.universiteitleiden.nl/en/staffmembers/arko-ghosh" class="btn btn-primary btn-sm nav-cta" data-i18n="navJoin">Join a Study</a>
+
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="nl" type="button">NL</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- INTRO (heading from data/partners-page.json; the HTML here is the fallback) -->
+<section class="disc-intro">
+  <div class="wrap">
+    <p class="disc-eyebrow reveal" data-i18n="pEyebrow">Partners</p>
+    <h1 class="disc-title reveal" data-delay="1"><span data-i18n="pTitle">We work with</span> <em data-i18n="pHighlight">partners across disciplines</em></h1>
+  </div>
+</section>
+
+<!-- RESEARCH PARTNERS: network and cards, both built from data/partners.json -->
+<section class="pt-section">
+  <div class="wrap">
+    <figure class="pt-network reveal" id="ptNetwork" aria-hidden="true"></figure>
+    <div class="pt-filters" id="ptFilters" role="group" aria-label="Filter partners by theme"></div>
+    <div class="pt-grid" id="ptGrid"></div>
+  </div>
+</section>
+
+<!-- FUNDERS -->
+<section class="pt-section pt-band" id="funders">
+  <div class="wrap">
+    <h2 class="pt-heading" data-i18n="pFunders">Funded by</h2>
+    <div class="pt-tiles" id="ptFunders"></div>
+  </div>
+</section>
+
+<!-- SPIN-OFFS -->
+<section class="pt-section" id="spinoffs">
+  <div class="wrap">
+    <h2 class="pt-heading" data-i18n="pSpinoffs">Spin-offs</h2>
+    <div class="pt-tiles" id="ptSpinoffs"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-brand"><strong>Code</strong>Lab</span>
+      <span class="footer-sub" data-i18n="brandSub">Leiden University</span>
+    </div>
+    <p class="footer-note">© <span id="year">2026</span> <span data-i18n="footerNote">CODELAB, Leiden University. Wassenaarseweg 52, Leiden.</span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script>
+var pageText = {
+  en: {
+    pEyebrow: "Partners",
+    pTitle: "We work with", pHighlight: "partners across disciplines",
+    pFunders: "Funded by", pSpinoffs: "Spin-offs",
+    pAll: "All partners", pFounded: "Founded", pLab: "CODELAB"
+  },
+  nl: {
+    pEyebrow: "Partners",
+    pTitle: "We werken samen met", pHighlight: "partners over disciplines heen",
+    pFunders: "Gefinancierd door", pSpinoffs: "Spin-offs",
+    pAll: "Alle partners", pFounded: "Opgericht", pLab: "CODELAB"
+  }
+};
+
+CodeLabData.load(['partners', 'partners-page']).then(function (data) {
+  var D = CodeLabData, dict = pageText;
+  var pg = data['partners-page'] || {};
+  if (pg.title) D.addText(dict, 'pTitle', pg.title);
+  if (pg.highlight) D.addText(dict, 'pHighlight', pg.highlight);
+
+  var grid = document.getElementById('ptGrid');
+  if (!data.partners) { D.showError(grid); initSite(dict); return; }
+
+  var all = data.partners;
+  var research = all.filter(function (p) { return p.group === 'research'; });
+  var funders = all.filter(function (p) { return p.group === 'funder'; });
+  var spinoffs = all.filter(function (p) { return p.group === 'spinoff'; });
+
+  /* Themes: labels from data/partners-page.json; an unknown id is shown tidied up */
+  var themeLabel = {};
+  (pg.themes || []).forEach(function (t) { themeLabel[t.id] = t.label; });
+  var used = [];
+  (pg.themes || []).forEach(function (t) {
+    if (research.some(function (p) { return (p.themes || []).indexOf(t.id) > -1; })) used.push(t.id);
+  });
+  research.forEach(function (p) { (p.themes || []).forEach(function (id) { if (used.indexOf(id) < 0) used.push(id); }); });
+  used.forEach(function (id) {
+    var lbl = themeLabel[id] || { en: id.replace(/-/g, ' ').replace(/^./, function (c) { return c.toUpperCase(); }) };
+    D.addText(dict, 'theme-' + id, lbl);
+  });
+
+  function link(url, inner, cls) {
+    return url ? '<a class="' + cls + '" href="' + D.esc(url) + '" target="_blank" rel="noopener">' + inner + '</a>' : '<span class="' + cls + '">' + inner + '</span>';
+  }
+
+  /* ---------- cards ---------- */
+  grid.innerHTML = research.map(function (p, i) {
+    var key = 'rp' + i, themes = p.themes || [];
+    var chips = themes.map(function (id) { return '<span class="pt-chip" data-i18n="theme-' + id + '"></span>'; }).join('');
+    var focus = p.focus && p.focus.en ? '<p class="pt-focus" data-i18n="' + D.addText(dict, key + 'Focus', p.focus) + '"></p>' : '';
+    var place = D.text(p.location, 'en') ? '<p class="pt-place" data-i18n="' + D.addText(dict, key + 'Place', p.location) + '"></p>' : '';
+    return '<article class="pt-card reveal" data-themes="' + D.esc(themes.join(' ')) + '" data-idx="' + i + '">' +
+      (chips ? '<div class="pt-chips">' + chips + '</div>' : '') +
+      '<h3 class="pt-name">' + link(p.url, '<span data-i18n="' + D.addText(dict, key + 'Name', p.name) + '"></span>', 'pt-name-link') + '</h3>' +
+      place + focus +
+    '</article>';
+  }).join('');
+
+  /* ---------- filters ---------- */
+  var filters = document.getElementById('ptFilters');
+  if (used.length) {
+    filters.innerHTML = '<button type="button" class="pt-filter is-on" data-theme="" data-i18n="pAll">All partners</button>' +
+      used.map(function (id) { return '<button type="button" class="pt-filter" data-theme="' + D.esc(id) + '" data-i18n="theme-' + id + '"></button>'; }).join('');
+  } else filters.hidden = true;
+
+  /* ---------- network ---------- */
+  var net = document.getElementById('ptNetwork');
+  net.innerHTML = buildNetwork(research, used);
+
+  function focusTheme(id) {
+    grid.querySelectorAll('.pt-card').forEach(function (c) {
+      c.hidden = !!id && (' ' + c.dataset.themes + ' ').indexOf(' ' + id + ' ') < 0;
+    });
+    filters.querySelectorAll('.pt-filter').forEach(function (b) {
+      b.classList.toggle('is-on', b.dataset.theme === id);
+      b.setAttribute('aria-pressed', b.dataset.theme === id ? 'true' : 'false');
+    });
+    net.classList.toggle('has-focus', !!id);
+    net.querySelectorAll('[data-t]').forEach(function (el) {
+      el.classList.toggle('is-lit', !!id && (' ' + el.getAttribute('data-t') + ' ').indexOf(' ' + id + ' ') > -1);
+    });
+  }
+  filters.addEventListener('click', function (e) {
+    var b = e.target.closest('.pt-filter'); if (b) focusTheme(b.dataset.theme);
+  });
+  net.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-theme-node]');
+    if (t) focusTheme(t.getAttribute('data-theme-node'));
+  });
+
+  /* ---------- funders and spin-offs ---------- */
+  function tiles(list, prefix, el) {
+    if (!list.length) { el.closest('section').hidden = true; return; }
+    el.innerHTML = list.map(function (p, i) {
+      var key = prefix + i, sub = '';
+      if (p.focus && p.focus.en) sub = '<span class="pt-tile-sub" data-i18n="' + D.addText(dict, key + 'Sub', p.focus) + '"></span>';
+      else if (p.founded) sub = '<span class="pt-tile-sub"><span data-i18n="pFounded">Founded</span> ' + D.esc(p.founded) + '</span>';
+      return link(p.url, '<span class="pt-tile-name" data-i18n="' + D.addText(dict, key + 'Name', p.name) + '"></span>' + sub, 'pt-tile reveal');
+    }).join('');
+  }
+  tiles(funders, 'fu', document.getElementById('ptFunders'));
+  tiles(spinoffs, 'so', document.getElementById('ptSpinoffs'));
+
+  initSite(dict);
+
+  /* The lab in the centre, themes on an inner ring, partners on an outer ring.
+     Layout is computed from the data, so adding a partner or theme just works. */
+  function buildNetwork(ps, themes) {
+    var W = 1160, H = 640, cx = W / 2, cy = H / 2, TAU = Math.PI * 2;
+    var tIndex = {}; themes.forEach(function (id, i) { tIndex[id] = i; });
+    var order = ps.map(function (p, i) { return i; }).sort(function (a, b) {
+      var ta = (ps[a].themes || [])[0], tb = (ps[b].themes || [])[0];
+      var ia = ta in tIndex ? tIndex[ta] : 999, ib = tb in tIndex ? tIndex[tb] : 999;
+      return ia - ib || a - b;
+    });
+    var pAng = {}; order.forEach(function (idx, k) { pAng[idx] = -Math.PI / 2 + (k + .5) / order.length * TAU; });
+    /* each theme sits at the mean direction of its partners, then is spread out */
+    var tAng = themes.map(function (id) {
+      var sx = 0, sy = 0;
+      ps.forEach(function (p, i) { if ((p.themes || []).indexOf(id) > -1) { sx += Math.cos(pAng[i]); sy += Math.sin(pAng[i]); } });
+      return Math.atan2(sy, sx);
+    });
+    var minGap = TAU / Math.max(themes.length, 1) * .92;
+    for (var it = 0; it < 60; it++) {
+      var idxs = tAng.map(function (a, i) { return i; }).sort(function (a, b) { return tAng[a] - tAng[b]; });
+      for (var k = 0; k < idxs.length; k++) {
+        var a1 = idxs[k], a2 = idxs[(k + 1) % idxs.length];
+        var gap = ((tAng[a2] - tAng[a1]) % TAU + TAU) % TAU;
+        if (idxs.length > 1 && gap < minGap) { var push = (minGap - gap) / 2; tAng[a1] -= push; tAng[a2] += push; }
+      }
+    }
+    var RT = [255, 170], RP = [400, 262];
+    function pos(a, R) { return [cx + Math.cos(a) * R[0], cy + Math.sin(a) * R[1]]; }
+    var out = [];
+    /* links */
+    ps.forEach(function (p, i) {
+      var pp = pos(pAng[i], RP), ts = (p.themes || []).filter(function (id) { return id in tIndex; });
+      if (!ts.length) out.push('<path class="pt-l pt-l-faint" d="M' + pp[0].toFixed(1) + ' ' + pp[1].toFixed(1) + 'L' + cx + ' ' + cy + '"/>');
+      ts.forEach(function (id) {
+        var tp = pos(tAng[tIndex[id]], RT), mx = (pp[0] + tp[0]) / 2 + (cx - (pp[0] + tp[0]) / 2) * .15, my = (pp[1] + tp[1]) / 2 + (cy - (pp[1] + tp[1]) / 2) * .15;
+        out.push('<path class="pt-l" data-t="' + id + '" d="M' + pp[0].toFixed(1) + ' ' + pp[1].toFixed(1) + 'Q' + mx.toFixed(1) + ' ' + my.toFixed(1) + ' ' + tp[0].toFixed(1) + ' ' + tp[1].toFixed(1) + '"/>');
+      });
+    });
+    themes.forEach(function (id, i) {
+      var tp = pos(tAng[i], RT);
+      out.push('<path class="pt-l pt-l-core" data-t="' + id + '" d="M' + tp[0].toFixed(1) + ' ' + tp[1].toFixed(1) + 'L' + cx + ' ' + cy + '"/>');
+    });
+    /* partner nodes */
+    ps.forEach(function (p, i) {
+      var pp = pos(pAng[i], RP), c = Math.cos(pAng[i]), anchor = c > .25 ? 'start' : c < -.25 ? 'end' : 'middle';
+      var dx = anchor === 'start' ? 14 : anchor === 'end' ? -14 : 0, dy = anchor === 'middle' ? (Math.sin(pAng[i]) > 0 ? 26 : -16) : 5;
+      out.push('<g class="pt-pnode" data-t="' + D.esc((p.themes || []).join(' ')) + '"><circle cx="' + pp[0].toFixed(1) + '" cy="' + pp[1].toFixed(1) + '" r="7"/>' +
+        '<text x="' + (pp[0] + dx).toFixed(1) + '" y="' + (pp[1] + dy).toFixed(1) + '" text-anchor="' + anchor + '">' + D.esc(p.short || D.text(p.name, 'en')) + '</text></g>');
+    });
+    /* theme nodes */
+    themes.forEach(function (id, i) {
+      var tp = pos(tAng[i], RT);
+      var c = Math.cos(tAng[i]), sn = Math.sin(tAng[i]);
+      var anc = c > .35 ? 'start' : c < -.35 ? 'end' : 'middle';
+      var lx = tp[0] + (anc === 'start' ? 16 : anc === 'end' ? -16 : 0), ly = tp[1] + (anc === 'middle' ? (sn > 0 ? 30 : -18) : 6);
+      out.push('<g class="pt-tnode" data-t="' + id + '" data-theme-node="' + id + '"><circle cx="' + tp[0].toFixed(1) + '" cy="' + tp[1].toFixed(1) + '" r="9"/>' +
+        '<text x="' + lx.toFixed(1) + '" y="' + ly.toFixed(1) + '" text-anchor="' + anc + '" data-i18n="theme-' + id + '"></text></g>');
+    });
+    out.push('<g class="pt-core"><circle cx="' + cx + '" cy="' + cy + '" r="46"/><text x="' + cx + '" y="' + (cy + 6) + '" text-anchor="middle">CODELAB</text></g>');
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">' + out.join('') + '</svg>';
+  }
+});
+</script>
+</body>
+</html>

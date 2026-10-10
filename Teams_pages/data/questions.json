@@ -1,0 +1,66 @@
+[
+  {
+    "id": "lifetime",
+    "short": {
+      "en": "Across the lifespan",
+      "nl": "Over de levensloop"
+    },
+    "question": {
+      "en": "How do we behave across the lifespan?",
+      "nl": "Hoe gedragen we ons over de levensloop?"
+    },
+    "answer": {
+      "en": "One measure of behaviour works from adolescence to old age. We use it to see how behaviour develops, how it changes with age, and what stays resilient.",
+      "nl": "Eén maat voor gedrag werkt van de adolescentie tot op hoge leeftijd. Daarmee zien we hoe gedrag zich ontwikkelt, hoe het verandert met de leeftijd, en wat veerkrachtig blijft."
+    },
+    "art": "jid-lifespan"
+  },
+  {
+    "id": "patterns-over-time",
+    "short": {
+      "en": "Nature of behaviour",
+      "nl": "Aard van gedrag"
+    },
+    "question": {
+      "en": "What is the nature of behaviour?",
+      "nl": "Wat is de aard van gedrag?"
+    },
+    "answer": {
+      "en": "Behaviour is neither random nor fixed. We study the structure and complexity of its patterns, what constrains them, and how they are sustained from days to years.",
+      "nl": "Gedrag is willekeurig noch vast. We bestuderen de structuur en complexiteit van de patronen, wat ze begrenst, en hoe ze standhouden van dagen tot jaren."
+    },
+    "art": "jid-trajectory"
+  },
+  {
+    "id": "brain-behaviour",
+    "short": {
+      "en": "Brain & behaviour",
+      "nl": "Brein & gedrag"
+    },
+    "question": {
+      "en": "Which brain processes underlie everyday behaviour?",
+      "nl": "Welke hersenprocessen liggen ten grondslag aan alledaags gedrag?"
+    },
+    "answer": {
+      "en": "We record brain activity while people use their phones as they normally would, linking neural processes to behaviour they choose for themselves.",
+      "nl": "We meten hersenactiviteit terwijl mensen hun telefoon gebruiken zoals ze dat altijd doen, en koppelen zo hersenprocessen aan gedrag dat ze zelf kiezen."
+    },
+    "art": "jid-neural"
+  },
+  {
+    "id": "brain-disorders",
+    "short": {
+      "en": "Brain disorders",
+      "nl": "Hersenaandoeningen"
+    },
+    "question": {
+      "en": "Can behaviour help us better understand disease?",
+      "nl": "Kan gedrag ons helpen ziekte beter te begrijpen?"
+    },
+    "answer": {
+      "en": "Disease changes behaviour in daily life, between clinic visits. Measuring it continuously shows how illness unfolds and fluctuates.",
+      "nl": "Ziekte verandert gedrag in het dagelijks leven, tussen klinische bezoeken door. Door dat doorlopend te meten zien we hoe ziekte zich ontvouwt en schommelt."
+    },
+    "art": "jid-disorder"
+  }
+]

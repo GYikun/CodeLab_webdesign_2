@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · CODELAB — Leiden University</title>
+<meta name="description" content="CODELAB's research questions: how the brain processes smartphone use, how behaviour reveals ageing and disease, and what hidden rhythms shape daily life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231f5ae0'/></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="CODELAB, Leiden University">
+      <span class="brand-name"><strong>Code</strong>Lab</span>
+      <span class="brand-sub" data-i18n="brandSub">Leiden University</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="discoveries.html" data-i18n="navMethods">Discoveries</a>
+        <a href="research.html" class="is-active" data-i18n="navQuestions">Research</a>
+        <a href="partners.html" data-i18n="navPartners">Partners</a>
+        <a href="team.html" data-i18n="navTeam">Team</a>
+        <a href="resources.html" data-i18n="navResources">Resources</a>
+      </nav>
+
+    <div class="header-controls">
+      <a href="https://www.universiteitleiden.nl/en/staffmembers/arko-ghosh" class="btn btn-primary btn-sm nav-cta" data-i18n="navJoin">Join a Study</a>
+
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="nl" type="button">NL</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- INTRO (text from data/questions-page.json; the HTML here is the fallback) -->
+<section class="disc-intro">
+  <div class="wrap">
+    <p class="disc-eyebrow reveal" data-i18n="qEyebrow">Research Questions</p>
+    <h1 class="disc-title reveal" data-delay="1"><span data-i18n="qTitle">Fundamental questions from</span> <em data-i18n="qHighlight">the patterns of everyday behaviour</em></h1>
+    <p class="disc-lede reveal" data-delay="2" data-i18n="qLede" id="qLede" hidden></p>
+  </div>
+</section>
+
+<!-- FRAMEWORK: animated map of behaviour (js/behaviour-map.js) -->
+<section class="q-frame-section">
+  <div class="wrap">
+    <div class="q-frame reveal" id="framework">
+      <div class="q-frame-head">
+        <h2 class="q-frame-title" data-i18n="qFrameTitle">One map of behaviour</h2>
+        <p class="q-frame-desc" data-i18n="qFrameText">Each touch on a phone is a moment when the flow of behaviour crosses the screen. Plotting every interval between touches against the next builds a map of how behaviour unfolds.</p>
+      </div>
+      <div class="bm">
+        <figure class="bm-panel">
+          <canvas class="bm-canvas" id="bmFlow" role="img" aria-label="A line flowing through space and crossing a flat plane; each crossing marks a touch."></canvas>
+          <figcaption data-i18n="qFlowCap">The flow of behaviour. Each crossing of the screen is a touch.</figcaption>
+        </figure>
+        <figure class="bm-panel">
+          <canvas class="bm-canvas" id="bmMap" role="img" aria-label="A map that fills with dots as each interval between touches is plotted against the next."></canvas>
+          <figcaption data-i18n="qMapCap">Each interval (across) against the next (up).</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTIONS (filled from data/questions.json; artwork from js/discovery-art.js) -->
+<section class="q-list-section">
+  <div class="wrap">
+    <div class="q-list" id="questionGrid"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-brand"><strong>Code</strong>Lab</span>
+      <span class="footer-sub" data-i18n="brandSub">Leiden University</span>
+    </div>
+    <p class="footer-note">© <span id="year">2026</span> <span data-i18n="footerNote">CODELAB, Leiden University. Wassenaarseweg 52, Leiden.</span></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/data.js"></script>
+<script src="js/discovery-art.js"></script>
+<script src="js/behaviour-map.js"></script>
+<script>
+var pageText = {
+  en: {
+    qEyebrow: "Questions",
+    qTitle: "Fundamental questions from", qHighlight: "the patterns of everyday behaviour", qLede: "",
+    qFrameTitle: "One map of behaviour",
+    qFrameText: "Each touch on a phone is a moment when the flow of behaviour crosses the screen. Plotting every interval between touches against the next builds a map of how behaviour unfolds.",
+    qFlowCap: "The flow of behaviour. Each crossing of the screen is a touch.",
+    qMapCap: "Each interval (across) against the next (up)."
+  },
+  nl: {
+    qEyebrow: "Vragen",
+    qTitle: "Fundamentele vragen uit", qHighlight: "de patronen van alledaags gedrag", qLede: "",
+    qFrameTitle: "Eén kaart van gedrag",
+    qFrameText: "Elke aanraking van een telefoon is een moment waarop de stroom van gedrag het scherm kruist. Door elk interval tussen aanrakingen uit te zetten tegen het volgende ontstaat een kaart van hoe gedrag zich ontvouwt.",
+    qFlowCap: "De stroom van gedrag. Elke kruising van het scherm is een aanraking.",
+    qMapCap: "Elk interval (horizontaal) tegen het volgende (verticaal)."
+  }
+};
+
+CodeLabData.load(['questions', 'questions-page']).then(function (data) {
+  var D = CodeLabData, dict = pageText;
+  var grid = document.getElementById('questionGrid');
+
+  /* Intro and framework text (data/questions-page.json) */
+  var pg = data['questions-page'] || {};
+  [['title', 'qTitle'], ['highlight', 'qHighlight'], ['intro', 'qLede'],
+   ['frameworkTitle', 'qFrameTitle'], ['frameworkText', 'qFrameText'],
+   ['flowCaption', 'qFlowCap'], ['mapCaption', 'qMapCap']].forEach(function (m) {
+    if (pg[m[0]]) D.addText(dict, m[1], pg[m[0]]);
+  });
+  /* The intro paragraph shows only when it has text */
+  document.getElementById('qLede').hidden = !(pg.intro && pg.intro.en);
+  BehaviourMap.mount(document.getElementById('bmFlow'), document.getElementById('bmMap'));
+
+  if (!data.questions) {
+    D.showError(grid);
+  } else {
+    grid.innerHTML = data.questions.map(function (q) {
+      var key = 'q-' + q.id, label = D.text(q.question, 'en');
+      var art = q.image
+        ? '<img src="' + D.esc(q.image) + '" alt="" loading="lazy">'
+        : DiscoveryArt.render(q.art, q.id || label, label);
+      return '<article class="q-row art-host reveal" id="' + D.esc(q.id) + '">' +
+        '<figure class="q-art">' + art + '</figure>' +
+        '<div class="q-text">' +
+          '<p class="q-short" data-i18n="' + D.addText(dict, key + '-s', q.short) + '"></p>' +
+          '<h2 class="q-name" data-i18n="' + D.addText(dict, key + '-q', q.question) + '"></h2>' +
+          '<p class="q-desc" data-i18n="' + D.addText(dict, key + '-a', q.answer) + '"></p>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+  }
+
+  initSite(dict);
+
+  /* Rows are built after load, so the browser could not jump to #id itself. */
+  var target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (target) target.scrollIntoView();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "title": {
+    "en": "We work with",
+    "nl": "We werken samen met"
+  },
+  "highlight": {
+    "en": "partners across disciplines",
+    "nl": "partners over disciplines heen"
+  },
+  "themes": [
+    {
+      "id": "epilepsy",
+      "label": {
+        "en": "Epilepsy",
+        "nl": "Epilepsie"
+      }
+    },
+    {
+      "id": "brain-recordings",
+      "label": {
+        "en": "Brain recordings",
+        "nl": "Hersenmetingen"
+      }
+    },
+    {
+      "id": "sleep",
+      "label": {
+        "en": "Sleep",
+        "nl": "Slaap"
+      }
+    },
+    {
+      "id": "adolescence",
+      "label": {
+        "en": "Adolescence",
+        "nl": "Adolescentie"
+      }
+    },
+    {
+      "id": "ageing",
+      "label": {
+        "en": "Ageing",
+        "nl": "Veroudering"
+      }
+    },
+    {
+      "id": "physical-activity",
+      "label": {
+        "en": "Physical activity",
+        "nl": "Lichamelijke activiteit"
+      }
+    },
+    {
+      "id": "complex-systems",
+      "label": {
+        "en": "Complex systems",
+        "nl": "Complexe systemen"
+      }
+    },
+    {
+      "id": "cognition",
+      "label": {
+        "en": "Cognition",
+        "nl": "Cognitie"
+      }
+    },
+    {
+      "id": "rehabilitation",
+      "label": {
+        "en": "Rehabilitation",
+        "nl": "Revalidatie"
+      }
+    }
+  ]
+}

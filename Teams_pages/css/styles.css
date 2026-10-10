@@ -1,0 +1,793 @@
+/* ==========================================================
+   CodeLab · Leiden University — Design Tokens
+   ========================================================== */
+:root {
+  --ink:        #0B2B5C;
+  --ink-soft:   #2A3550;
+  --blue:       #1F5AE0;
+  --blue-700:   #123C9E;
+  --blue-100:   #DCE7FA;
+  --blue-050:   #EAF1FE;
+  --amber:      #F5B33C;
+  --green:      #4CAF7D;
+  --text:       #5A6478;
+  --bg:         #FFFFFF;
+  --bg-soft:    #F6F8FC;
+  --line:       #E4EAF3;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans:  "Inter", system-ui, -apple-system, sans-serif;
+  --wrap:   1400px;
+  --nav-h:  80px;
+  --radius: 10px;
+  --ease:   cubic-bezier(.22,.68,.28,1);
+}
+*, *::before, *::after { box-sizing: border-box }
+html { scroll-behavior: smooth }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 18px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+img, svg { display: block; max-width: 100% }
+a { color: inherit; text-decoration: none }
+h1, h2, h3, h4 { margin: 0; color: var(--ink) }
+p { margin: 0 }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 48px }
+.arrow { display: inline-block; transition: transform .25s var(--ease) }
+a:hover .arrow, button:hover .arrow { transform: translateX(4px) }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px; border-radius: 6px; border: 1px solid transparent;
+  font-weight: 600; font-size: 15px; cursor: pointer;
+  transition: background .2s var(--ease), color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.btn-primary { background: var(--ink); color: #fff }
+.btn-primary:hover { background: var(--blue-700); box-shadow: 0 8px 20px rgba(18,60,158,.22) }
+
+.btn-sm { padding: 10px 20px; font-size: 14px }
+
+/* ---- Header ---- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(160%) blur(10px);
+  transition: box-shadow .25s var(--ease);
+}
+.site-header.is-stuck { box-shadow: 0 1px 0 var(--line), 0 6px 24px rgba(11,43,92,.06) }
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: clamp(14px, 1.6vw, 30px); min-height: 80px;
+}
+.brand { display: flex; flex-direction: column; gap: 2px; flex-shrink: 0 }
+.brand-name {
+  display: block; font-family: var(--serif); font-size: 26px;
+  font-weight: 600; color: var(--blue); letter-spacing: -.01em; line-height: 1
+}
+.brand-name strong { color: var(--ink); font-weight: 700 }
+.brand-sub { display: block; font-size: 12px; color: var(--text); letter-spacing: .04em; text-transform: uppercase }
+
+.header-controls { display: flex; align-items: center; gap: clamp(10px, 1vw, 16px); flex-shrink: 0 }
+
+.lang-switch {
+  display: flex; align-items: center; gap: 2px;
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: #fff
+}
+.lang-btn {
+  border: 0; background: none; padding: 6px clamp(9px, 0.9vw, 13px); border-radius: 999px;
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  color: var(--text); cursor: pointer; transition: background .2s var(--ease), color .2s var(--ease);
+  font-family: var(--sans);
+}
+.lang-btn.is-active { background: var(--ink); color: #fff }
+.lang-btn:hover:not(.is-active) { color: var(--blue) }
+
+.nav { display: flex; align-items: center; justify-content: center; flex: 1; min-width: 0; gap: clamp(10px, 1.2vw, 22px) }
+.nav a { font-size: clamp(13px, 1vw, 16px); color: var(--ink); opacity: .82; position: relative; padding: 6px 0; white-space: nowrap }
+.nav a:hover { opacity: 1; color: var(--blue) }
+.nav a.is-active { color: var(--blue); opacity: 1; font-weight: 500 }
+.nav a.is-active::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
+  height: 2px; background: var(--blue)
+}
+.nav-cta { color: #fff !important; opacity: 1 !important; white-space: nowrap; padding: 10px clamp(14px, 1.3vw, 22px); font-size: clamp(13px, 1vw, 14px) }
+.nav-cta.is-active::after { display: none }
+.nav-toggle {
+  display: none; width: 44px; height: 44px;
+  background: none; border: 0; cursor: pointer; padding: 10px
+}
+.nav-toggle span { display: block; height: 2px; background: var(--ink); margin: 5px 0; transition: transform .25s var(--ease), opacity .2s }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg) }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0 }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) }
+
+/* ---- Hero (two-column grid: text left ~40%, illustration right ~60%) ---- */
+.hero {
+  overflow: hidden;
+  background: radial-gradient(56% 64% at 72% 48%, rgba(31,90,224,.07), rgba(31,90,224,0) 70%), #fff;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+  gap: clamp(8px, 1.2vw, 20px); align-items: center;
+  min-height: calc(100vh - var(--nav-h));
+  padding-block: clamp(16px, 3vh, 40px);
+}
+.hero-copy { position: relative; z-index: 2; display: flex; flex-direction: column }
+.hero-media {
+  position: relative; z-index: 1;
+  justify-self: end; width: 100%;
+  transform: scale(1.12); transform-origin: center right;
+}
+.hero-bg {
+  width: 100%; height: auto; max-width: 100%;
+  object-fit: contain; display: block;
+  animation: heroFade .9s var(--ease) both;
+}
+@keyframes heroFade { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+.hero-prelude {
+  display: flex; align-items: flex-start; gap: 12px; max-width: 54ch;
+  margin-bottom: clamp(14px, 2.2vh, 22px);
+  font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.05vw, 17px); line-height: 1.5; color: var(--ink-soft)
+}
+.hero-stars { flex: none; width: 64px; height: 22px; margin-top: 1px; overflow: visible }
+.hero-stars path { fill: none; stroke: var(--blue); stroke-width: 1; opacity: .45; stroke-dasharray: 2 3 }
+.hero-stars circle { fill: var(--blue-700) }
+.hero-stars .hero-star-now { fill: var(--amber) }
+.hero-title {
+  font-family: var(--serif); font-weight: 700;
+  /* Image beside the text: keep the fixed line breaks and scale the whole title with the screen.
+     4vw keeps the longest line (Dutch) inside the text column; 60px caps it once the column stops growing */
+  font-size: clamp(34px, 4vw, 60px); line-height: 1.06; letter-spacing: -.02em;
+  max-width: 18ch; text-wrap: balance;
+}
+.hero-title em { display: block; font-style: italic; font-weight: 600; color: var(--blue) }
+.hero-lede { margin: clamp(16px, 2.4vh, 24px) 0 clamp(20px, 3vh, 30px); font-size: clamp(17px, 1.2vw, 19px); line-height: 1.6; max-width: 42ch; color: var(--text) }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px }
+.scroll-hint {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-top: clamp(20px, 3vh, 32px); color: var(--text); font-size: 14px
+}
+.scroll-hint:hover { color: var(--blue) }
+.scroll-arrow { animation: arrowBounce 1.6s ease-in-out infinite }
+@keyframes arrowBounce { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(6px) } }
+
+/* ---- Data load error (js/data.js) ---- */
+.data-error { font-size: 14px; color: var(--text); padding: 12px 0 }
+
+/* ---- Shared section labels ---- */
+
+.section-title {
+  font-family: var(--serif); font-size: clamp(28px, 2.6vw, 40px);
+  font-weight: 600; line-height: 1.2; letter-spacing: -.015em
+}
+
+/* ---- Thread of ideas (homepage, data/milestones.json) ---- */
+.thread-band { border-top: 1px solid var(--line); padding: clamp(48px, 7vw, 88px) 0 clamp(56px, 8vw, 96px); background: #fff }
+.thread-title {
+  font-family: var(--serif); font-weight: 600; letter-spacing: -.01em; line-height: 1.15;
+  font-size: clamp(26px, 2.8vw, 38px); text-align: center; text-wrap: balance
+}
+.thread { position: relative; margin-top: clamp(28px, 4vw, 48px) }
+.thread-line { position: absolute; inset: 0; overflow: visible; pointer-events: none }
+.thread-path {
+  fill: none; stroke: var(--blue); stroke-width: 2; stroke-linecap: round; opacity: .55;
+  stroke-dasharray: var(--len, 0); stroke-dashoffset: var(--len, 0)
+}
+.thread.is-in .thread-path, .thread-band .is-in .thread-path { animation: threadDraw 2.6s var(--ease) forwards }
+@keyframes threadDraw { to { stroke-dashoffset: 0 } }
+.thread-list {
+  position: relative; list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(var(--count, 8), minmax(0, 1fr));
+  grid-template-rows: auto 64px auto; column-gap: clamp(8px, 1.2vw, 18px)
+}
+.thread-step { display: contents }
+.thread-node {
+  grid-row: 2; grid-column: calc(var(--i) + 1); align-self: center; justify-self: center;
+  width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2.5px solid var(--blue);
+  position: relative; z-index: 1
+}
+.is-high .thread-node { transform: translateY(-10px) }
+.is-low .thread-node { transform: translateY(10px) }
+.is-today .thread-node { border-color: var(--amber); background: var(--amber); box-shadow: 0 0 0 6px rgba(245,179,60,.2) }
+.is-future .thread-node { border-style: dashed; border-color: var(--amber) }
+.thread-text {
+  grid-column: calc(var(--i) + 1); font-size: 15px; line-height: 1.45; color: var(--ink-soft);
+  text-align: center; text-wrap: balance
+}
+.is-high .thread-text { grid-row: 1; align-self: end; padding-bottom: 6px }
+.is-low .thread-text { grid-row: 3; align-self: start; padding-top: 6px }
+.thread-era {
+  display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: #A86A00; margin-bottom: 4px
+}
+@media (max-width: 900px) {
+  .thread-title { text-align: left }
+  .thread-list { grid-template-columns: 28px minmax(0, 1fr); grid-template-rows: none; row-gap: 26px; column-gap: 16px }
+  .thread-node { grid-row: calc(var(--i) + 1); grid-column: 1; transform: none !important; align-self: start; margin-top: 4px }
+  .thread-text, .is-high .thread-text, .is-low .thread-text {
+    grid-row: calc(var(--i) + 1); grid-column: 2; text-align: left; padding: 0; align-self: start
+  }
+}
+@media (prefers-reduced-motion: reduce) { .thread-path { stroke-dashoffset: 0 } }
+
+/* ---- Footer ---- */
+.site-footer { border-top: 1px solid var(--line); padding: 36px 0; background: #fff }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px }
+.footer-brand { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--blue) }
+.footer-brand strong { color: var(--ink); font-weight: 700 }
+.footer-sub { display: block; font-size: 11px; color: var(--text); letter-spacing: .04em; text-transform: uppercase; margin-top: 2px }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 22px; font-size: 14px }
+.site-footer nav a:hover { color: var(--blue) }
+.footer-note { font-size: 13px; margin: 0 }
+
+/* ---- Page hero (sub-pages) ---- */
+
+/* Compact page-hero variant: title only, minimal whitespace (used on Team page) */
+
+/* ---- Discoveries (list of findings, used on Methods page) ---- */
+.discoveries-section { padding: 32px 0 88px }
+.discovery-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px }
+.discovery-item {
+  display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 16px;
+  padding: 22px; background: #fff; border: 1px solid #D5DEEC;
+  border-radius: var(--radius); align-items: start;
+  box-shadow: 0 1px 2px rgba(11,43,92,.06), 0 4px 14px rgba(11,43,92,.06);
+  transition: box-shadow .25s var(--ease), border-color .25s var(--ease)
+}
+.discovery-item:hover { border-color: var(--blue-100); box-shadow: 0 2px 4px rgba(11,43,92,.06), 0 12px 28px rgba(11,43,92,.12) }
+.discovery-icon {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 11px; background: var(--blue-050)
+}
+.discovery-icon svg {
+  width: 24px; height: 24px; fill: none; stroke: var(--blue);
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round
+}
+.discovery-name { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.35; overflow-wrap: break-word }
+/* Paper link on the title, and an optional image/GIF in place of the icon */
+.discovery-link { color: inherit }
+.discovery-link:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 3px }
+.discovery-item.has-image { grid-template-columns: 180px minmax(0, 1fr); gap: 20px }
+.discovery-media { border-radius: 8px; overflow: hidden; background: var(--blue-050) }
+.discovery-media img { display: block; width: 100%; height: auto }
+.discovery-desc { font-size: 14px; color: var(--text); line-height: 1.55 }
+.discovery-cite { display: block; font-size: 15px; color: var(--text); margin-top: 8px; opacity: .75 }
+/* Optional video below the list (data/video.json) */
+.discovery-video {
+  margin-top: 40px; border: 1px solid #D5DEEC; border-radius: var(--radius);
+  overflow: hidden; background: var(--bg-soft);
+  box-shadow: 0 1px 2px rgba(11,43,92,.06), 0 4px 14px rgba(11,43,92,.06)
+}
+.discovery-video video,
+.discovery-video img { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain }
+.discovery-video video { background: var(--ink) }
+
+/* ---- Discoveries page: gallery of abstract artworks (data/discoveries.json + js/discovery-art.js) ---- */
+.disc-intro { padding: clamp(20px, 3vw, 40px) 0 clamp(12px, 1.5vw, 20px) }
+.disc-eyebrow {
+  font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 8px
+}
+.disc-title {
+  font-family: var(--serif); font-weight: 600; letter-spacing: -.015em; line-height: 1.08;
+  font-size: clamp(36px, 5.2vw, 64px)
+}
+.disc-title em { font-style: italic; color: var(--blue) }
+.disc-lede { margin-top: 12px; font-size: clamp(17px, 1.5vw, 20px); color: var(--ink-soft) }
+
+.disc-list-section { padding: 8px 0 96px }
+.disc-gallery {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: clamp(20px, 2.4vw, 36px)
+}
+.disc-card {
+  display: flex; flex-direction: column; background: #fff; color: inherit;
+  border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  box-shadow: 0 1px 2px rgba(11,43,92,.04), 0 10px 30px rgba(11,43,92,.06);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease)
+}
+a.disc-card:hover {
+  transform: translateY(-4px); border-color: var(--blue-100);
+  box-shadow: 0 2px 4px rgba(11,43,92,.06), 0 20px 44px rgba(11,43,92,.14)
+}
+.disc-art { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--bg-soft) }
+.disc-art svg, .disc-art img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease) }
+a.disc-card:hover .disc-art svg, a.disc-card:hover .disc-art img { transform: scale(1.04) }
+.disc-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1 }
+.disc-name {
+  margin-top: 0; font-family: var(--serif); font-weight: 600; line-height: 1.2;
+  font-size: clamp(21px, 1.7vw, 24px); letter-spacing: -.01em
+}
+.disc-summary { margin-top: 10px; font-size: 16px; line-height: 1.55; color: var(--ink-soft) }
+.disc-read { margin-top: auto; padding-top: 18px; font-size: 15px; font-weight: 600; color: var(--blue) }
+a.disc-card:hover .disc-read { color: var(--blue-700) }
+
+/* Artwork motion (Discoveries and Questions): gentle, and only once on screen */
+.art-host .art-draw { stroke-dasharray: 1; stroke-dashoffset: 1 }
+.art-host.is-in .art-draw { animation: artDraw 2.4s var(--ease) forwards }
+.art-host .art-fade { opacity: 0 }
+.art-host.is-in .art-fade { animation: artFade 1s var(--ease) forwards }
+.art-host.is-in .art-pulse { animation: artPulse 3.2s ease-in-out infinite }
+@keyframes artDraw { to { stroke-dashoffset: 0 } }
+@keyframes artFade { to { opacity: var(--o, .8) } }
+@keyframes artPulse { 50% { opacity: .35 } }
+@media (prefers-reduced-motion: reduce) {
+  .art-host .art-draw { stroke-dashoffset: 0 }
+  .art-host .art-fade { opacity: var(--o, .8) }
+}
+
+/* ---- Questions page: JID framework panel and question rows ---- */
+.q-frame-section { padding: 0 0 clamp(48px, 7vw, 88px) }
+.q-frame {
+  display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px);
+  padding: clamp(20px, 3vw, 40px); border-radius: 20px;
+  background: var(--blue-050); border: 1px solid var(--blue-100)
+}
+.q-frame-head { max-width: 62ch }
+.q-frame-title {
+  font-family: var(--serif); font-weight: 600; letter-spacing: -.01em; line-height: 1.15;
+  font-size: clamp(26px, 2.6vw, 34px)
+}
+.q-frame-desc { margin-top: 10px; font-size: 17px; color: var(--ink-soft) }
+.bm { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 24px) }
+.bm-panel { margin: 0; display: flex; flex-direction: column; gap: 10px; min-width: 0 }
+.bm-canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 1; max-height: 460px;
+  border-radius: 14px; background: #fff; border: 1px solid var(--blue-100)
+}
+.bm-panel figcaption { font-size: 14px; color: var(--text) }
+@media (max-width: 640px) { .bm { grid-template-columns: minmax(0, 1fr) } }
+
+.q-list-section { padding: 0 0 104px }
+.q-list { display: flex; flex-direction: column; gap: clamp(48px, 7vw, 96px) }
+.q-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 4.5vw, 72px); align-items: center; scroll-margin-top: 100px
+}
+.q-row:nth-child(even) .q-art { order: 2 }
+.q-art {
+  margin: 0; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden;
+  background: var(--bg-soft); border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(11,43,92,.04), 0 14px 34px rgba(11,43,92,.07)
+}
+.q-art svg, .q-art img { display: block; width: 100%; height: 100%; object-fit: cover }
+.q-short { font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue) }
+.q-name {
+  margin-top: 10px; font-family: var(--serif); font-weight: 600; line-height: 1.15;
+  font-size: clamp(26px, 2.8vw, 38px); letter-spacing: -.01em; text-wrap: balance
+}
+.q-desc { margin-top: 14px; font-size: 17px; line-height: 1.6; color: var(--ink-soft); max-width: 56ch }
+
+@media (max-width: 900px) {
+  .q-row { grid-template-columns: minmax(0, 1fr); gap: 20px }
+  .q-row:nth-child(even) .q-art { order: 0 }
+}
+
+/* ---- Question cards (Research Questions page) ---- */
+.questions-section { padding: 32px 0 72px }
+.question-grid { display: grid; grid-template-columns: 1fr; gap: 20px }
+.question-card {
+  background: #fff; border: 1px solid #D5DEEC; border-radius: var(--radius);
+  padding: 28px 26px; display: grid; grid-template-columns: 48px 1fr; gap: 10px 20px; align-items: start;
+  box-shadow: 0 1px 2px rgba(11,43,92,.06), 0 4px 14px rgba(11,43,92,.06);
+  transition: box-shadow .3s var(--ease), transform .3s var(--ease)
+}
+.question-card:hover { box-shadow: 0 16px 34px rgba(11,43,92,.11); transform: translateY(-5px) }
+.question-icon {
+  grid-row: 1 / span 2;
+  width: 48px; height: 48px; display: grid; place-items: center;
+  border-radius: 11px; background: var(--blue-050)
+}
+.question-icon svg {
+  width: 24px; height: 24px; fill: none; stroke: var(--blue);
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round
+}
+.question-name { font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.4 }
+.question-desc { font-size: 14px; color: var(--text); line-height: 1.6 }
+
+/* ---- Team cards (Team page) ---- */
+.team-section { padding: 56px 0 72px }
+
+/* ---- Resource cards (Resources page) ---- */
+.resources-section { padding: 32px 0 72px }
+.resource-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px }
+.resource-card {
+  background: #fff; border: 1px solid #D5DEEC; border-radius: var(--radius); padding: 28px;
+  display: flex; flex-direction: column; gap: 10px; text-decoration: none;
+  box-shadow: 0 1px 2px rgba(11,43,92,.06), 0 4px 14px rgba(11,43,92,.06);
+  transition: box-shadow .25s var(--ease), border-color .25s var(--ease)
+}
+.resource-card:hover { border-color: var(--blue-100); box-shadow: 0 2px 4px rgba(11,43,92,.06), 0 12px 28px rgba(11,43,92,.12) }
+.res-block + .res-block { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line) }
+.res-head { display: flex; align-items: center; gap: 16px; margin-bottom: 24px }
+.res-icon {
+  flex-shrink: 0; width: 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 12px; background: var(--blue-050)
+}
+.res-icon svg {
+  width: 26px; height: 26px; fill: none; stroke: var(--blue);
+  stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round
+}
+.res-title { font-family: var(--serif); font-size: clamp(24px, 2vw, 30px); font-weight: 600; color: var(--ink); line-height: 1.2 }
+.res-sub { font-size: 15px; color: var(--text); margin-top: 4px }
+.resource-type { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue) }
+.resource-name { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.3 }
+.resource-desc { font-size: 14px; color: var(--text); line-height: 1.55; flex: 1 }
+.resource-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--blue); margin-top: 10px }
+
+/* ---- Scroll reveal ---- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease) }
+.reveal[data-delay="1"] { transition-delay: .08s }
+.reveal[data-delay="2"] { transition-delay: .16s }
+.reveal[data-delay="3"] { transition-delay: .24s }
+.reveal[data-delay="4"] { transition-delay: .32s }
+.reveal[data-delay="5"] { transition-delay: .40s }
+.reveal[data-delay="6"] { transition-delay: .48s }
+.reveal.is-in { opacity: 1; transform: none }
+
+/* ---- Responsive ---- */
+@media (max-width: 1180px) {
+  .wrap { padding: 0 32px }
+  
+  
+}
+@media (max-width: 960px) {
+  .nav {
+    position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; align-items: flex-start; gap: 0;
+    background: #fff; border-top: 1px solid var(--line);
+    padding: 10px 32px 22px; display: none
+  }
+  .nav.is-open { display: flex }
+  .nav a { width: 100%; padding: 14px 0; border-bottom: 1px solid var(--line); white-space: normal }
+  /* Full-width rows: underline the label text only, not the whole row */
+  .nav a.is-active::after { display: none }
+  .nav a.is-active { text-decoration: underline 2px var(--blue); text-underline-offset: 6px }
+  .nav-toggle { display: block }
+  
+}
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr; gap: clamp(20px, 4vw, 32px);
+    min-height: 0; padding-block: clamp(24px, 5vh, 48px);
+  }
+  .hero-copy { align-items: flex-start }
+  .hero-media { justify-self: center; width: 100%; max-width: 660px; transform: none; z-index: auto }
+  /* Image moves below the text: drop the fixed line breaks and let the text wrap to the width */
+  .hero-title { font-size: clamp(36px, 5.2vw, 48px); max-width: 18ch }
+  .hero-lede { max-width: 62ch }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 24px }
+  .nav { padding-left: 24px; padding-right: 24px }
+  .hero-actions .btn { flex: 1; justify-content: center }
+  
+  
+  
+  .header-controls { gap: 12px }
+  
+   .resource-grid { grid-template-columns: 1fr }
+  
+}
+@media (max-width: 440px) {
+  /* Keep brand + CTA + language switch + menu button on one row on phones */
+  .wrap { padding: 0 20px }
+  .header-inner { gap: 8px }
+  .header-controls { gap: 6px }
+  .brand-name { font-size: 21px }
+  .brand-sub { font-size: 9.5px; letter-spacing: .02em }
+  /* long labels (e.g. Dutch) wrap onto two lines instead of pushing the menu button off-screen */
+  .nav-cta { padding: 6px 11px; font-size: 12px; white-space: normal; max-width: 8.5em; text-align: center; line-height: 1.2 }
+  .lang-btn { padding: 5px 8px; font-size: 11px }
+  .nav-toggle { width: 38px; padding: 8px 6px }
+  .nav { padding-left: 20px; padding-right: 20px }
+  .discovery-item { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; padding: 18px }
+  .discovery-icon { width: 40px; height: 40px }
+  .discovery-item.has-image { grid-template-columns: minmax(0, 1fr); gap: 14px }
+}
+@media (max-width: 360px) {
+  .header-inner { gap: 6px }
+  .header-controls { gap: 4px }
+  .brand-name { font-size: 19px }
+  .brand-sub { font-size: 8.5px; letter-spacing: 0 }
+  .nav-cta { padding: 6px 7px; font-size: 11px; max-width: 7.6em }
+  .lang-switch { padding: 2px }
+  .lang-btn { padding: 4px 4px }
+  .nav-toggle { width: 30px; padding: 8px 3px }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important }
+  .reveal { opacity: 1; transform: none }
+  html { scroll-behavior: auto }
+}
+
+/* ==========================================================
+   CodeLab - Team page timelines  (css/team.css)
+   ----------------------------------------------------------
+   STANDALONE stylesheet. Load it AFTER css/styles.css:
+       <link rel="stylesheet" href="css/styles.css">
+       <link rel="stylesheet" href="css/team.css">
+   It inherits the design tokens (--blue, --ink, --line ...)
+   declared on :root in styles.css. Do not paste this into
+   styles.css - keeping it separate is what makes the team
+   page independently maintainable.
+
+   Uses only existing tokens: --blue, --amber, --ink, --line,
+   --bg-soft, --text. Amber marks the one thing worth clicking.
+   ASCII only - no literal non-ASCII characters in this file.
+   ========================================================== */
+
+/* ---- member card ---- */
+.tmember-list { display: flex; flex-direction: column; gap: 12px }
+/* The [hidden] attribute relies on the browser default display:none.
+   Any author `display` rule outranks it, so the alumni panel would stay
+   visible while the toggle only swapped its label. Restore it here. */
+.tmember-list[hidden] { display: none }
+.tmember {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: #fff; padding: 16px 24px 12px;
+  transition: box-shadow .25s var(--ease)
+}
+.tmember:hover { box-shadow: 0 8px 24px rgba(11,43,92,.07) }
+
+.tmember-head {
+  display: grid; grid-template-columns: 44px 1fr auto;
+  gap: 14px; align-items: center
+}
+.tmember-actions { display: flex; align-items: center; gap: 8px }
+.tmember-photo {
+  width: 44px; height: 44px; border-radius: 50%; overflow: hidden;
+  background: var(--blue-100); display: grid; place-items: center;
+  position: relative; flex-shrink: 0
+}
+.tmember-photo svg {
+  width: 22px; height: 22px; fill: none; stroke: var(--blue);
+  stroke-width: 1.5; stroke-linecap: round
+}
+.tmember-photo img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; border-radius: 50%
+}
+.tmember-name { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.3 }
+/* only rendered for alumni - current members show no role */
+.tmember-role { font-size: 13px; color: var(--text); line-height: 1.4 }
+.tmember-link {
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  font-size: 13px; font-weight: 500; color: var(--blue);
+  border: 1px solid var(--line); border-radius: 99px; padding: 8px 16px;
+  transition: border-color .2s var(--ease), background .2s var(--ease)
+}
+.tmember-link:hover { border-color: var(--blue); background: var(--blue-050) }
+
+/* ---- replay (speed is fixed in js/team.js, no viewer control) ---- */
+.tml-replay {
+  font-family: var(--sans); font-size: 12px; font-weight: 600;
+  color: var(--text); background: none; border: 1px solid var(--line);
+  cursor: pointer; padding: 6px 14px; border-radius: 99px; line-height: 1.4;
+  transition: color .2s var(--ease), border-color .2s var(--ease)
+}
+.tml-replay:hover { color: var(--blue); border-color: var(--blue) }
+
+/* ---- stage ---- */
+.tml-stage { position: relative; margin-top: 8px }
+.tml-svg { position: absolute; top: 0; overflow: visible }
+.tml-guide { stroke: var(--line); stroke-width: 2 }
+.tml-path {
+  stroke: var(--blue); stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1
+}
+/* alumni: the thread narrows to a point instead of ending in an arrow.
+   A stroke cannot vary in width, so this is a filled outline built in
+   js/team.js - fill, not stroke. */
+.tml-tail { fill: var(--blue); opacity: 0; transition: opacity .3s var(--ease) }
+.tml-tail.is-in { opacity: 1 }
+.tml-nodes { position: absolute; inset: 0 }
+
+/* ---- dots ---- */
+.tml-dot {
+  position: absolute; width: 34px; height: 34px; padding: 0;
+  transform: translate(-50%, -50%); border: 0; background: none;
+  display: grid; place-items: center;
+  opacity: 0; transition: opacity .28s var(--ease)
+}
+.tml-dot.is-in { opacity: 1 }
+.tml-dot.is-key { pointer-events: auto }
+.tml-mark {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #fff; border: 2.5px solid var(--blue);
+  transform: scale(.55);
+  transition: transform .28s var(--ease), background .2s var(--ease),
+              border-color .2s var(--ease), box-shadow .2s var(--ease)
+}
+.tml-dot.is-in .tml-mark { transform: scale(1) }
+
+.tml-dot.is-key .tml-mark {
+  width: 16px; height: 16px; border-color: var(--amber); border-width: 3px
+}
+.tml-dot.is-key:hover .tml-mark,
+.tml-dot.is-hot .tml-mark { box-shadow: 0 0 0 5px rgba(245,179,60,.18) }
+.tml-dot.is-open .tml-mark {
+  background: var(--amber); box-shadow: 0 0 0 5px rgba(245,179,60,.22)
+}
+
+/* ---- end cap: arrow, current members only.
+     Alumni get the tapered tail above instead. ---- */
+.tml-cap {
+  position: absolute; width: 14px; height: 14px;
+  opacity: 0; transition: opacity .3s var(--ease)
+}
+.tml-cap.is-in { opacity: 1 }
+.tml-cap::before {
+  content: ""; position: absolute; left: 1px; top: 3px;
+  width: 8px; height: 8px; border-right: 2px solid var(--blue);
+  border-top: 2px solid var(--blue); transform: rotate(45deg)
+}
+
+/* ---- labels ---- */
+.tml-label {
+  position: absolute; transform: translateX(-50%);
+  display: flex; flex-direction: column; gap: 1px;
+  opacity: 0; transition: opacity .32s var(--ease);
+  pointer-events: none;
+  /* button reset - key labels are <button>, plain ones are <div> */
+  margin: 0; padding: 0; border: 0; background: none;
+  font-family: var(--sans); text-align: left
+}
+/* the whole key label, "Read more" included, opens the panel */
+button.tml-label { pointer-events: auto; cursor: pointer }
+button.tml-label:hover .tml-text { color: var(--ink) }
+button.tml-label:hover .tml-more { text-decoration: underline }
+.tml-label.is-above { transform: translate(-50%, -100%) }
+.tml-label.is-in { opacity: 1 }
+.tml-year { font-size: 12px; font-weight: 700; color: var(--ink); letter-spacing: .02em }
+.tml-text { font-size: 13px; line-height: 1.4; color: var(--text) }
+.tml-more { font-size: 11px; font-weight: 600; color: #9A6A00; margin-top: 2px }
+
+/* ---- detail panel ---- */
+.tml-details { margin-top: 0 }
+.tml-detail {
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-left: 3px solid var(--amber); border-radius: 0;
+  padding: 16px 20px; margin-top: 4px;
+  animation: tmlOpen .3s var(--ease) both
+}
+@keyframes tmlOpen { from { opacity: 0; transform: translateY(-6px) } to { opacity: 1; transform: none } }
+.tml-detail-year { font-size: 12px; font-weight: 700; color: #9A6A00; letter-spacing: .06em }
+.tml-detail-title { font-size: 16px; font-weight: 600; color: var(--ink); margin-top: 4px; line-height: 1.35 }
+.tml-detail-body { font-size: 14px; line-height: 1.6; color: var(--text); margin-top: 6px; max-width: 76ch }
+
+/* ---- vertical mode (portrait devices) ---- */
+.tmember.is-vert .tml-label { transform: translateY(-50%) }
+.tmember.is-vert .tml-label.is-above { transform: translateY(-50%) }
+.tmember.is-vert .tml-text { font-size: 14px }
+
+/* ---- section rhythm (item 3: much less whitespace) ---- */
+.team-section { padding: 32px 0 24px }
+
+/* ---- alumni: identical card, collapsed by default, page foot ---- */
+.alumni-section { padding: 0 0 48px }
+.alumni-head { border-top: 1px solid var(--line); padding-top: 24px }
+.alumni-toggle {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--ink);
+  background: none; border: 1px solid var(--line); border-radius: 99px;
+  padding: 12px 24px; cursor: pointer;
+  transition: border-color .2s var(--ease), color .2s var(--ease)
+}
+.alumni-toggle:hover { border-color: var(--blue); color: var(--blue) }
+.alumni-chev {
+  width: 9px; height: 9px; border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor; transform: rotate(45deg) translate(-2px,-2px);
+  transition: transform .3s var(--ease)
+}
+.alumni-toggle[aria-expanded="true"] .alumni-chev { transform: rotate(-135deg) translate(-2px,-2px) }
+.alumni-count { font-size: 13px; font-weight: 500; color: var(--text) }
+#alumniPanel { margin-top: 16px }
+
+/* anchor targets for the per-member research links */
+.question-card { scroll-margin-top: 100px }
+
+@media (max-width: 640px) {
+  .tmember { padding: 16px }
+  .tmember-head { grid-template-columns: 40px 1fr; row-gap: 10px }
+  .tmember-photo { width: 40px; height: 40px }
+  .tmember-actions { grid-column: 1 / -1; justify-self: start; flex-wrap: wrap; max-width: 100% }
+  .tmember-link { white-space: normal }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tml-path { stroke-dashoffset: 0 }
+  .tml-dot, .tml-label, .tml-cap, .tml-tail { opacity: 1 }
+  .tml-mark { transform: scale(1) }
+}
+
+/* ---- Partners page: network, theme filter, cards, funders, spin-offs ---- */
+.pt-section { padding: 0 0 clamp(56px, 8vw, 96px) }
+.pt-band { padding-top: clamp(48px, 7vw, 80px); background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: clamp(48px, 7vw, 80px) }
+.pt-heading {
+  font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 22px
+}
+
+.pt-network { margin: 0 0 clamp(24px, 3vw, 36px); border-radius: 20px; background: linear-gradient(135deg, var(--bg-soft), var(--blue-050)); border: 1px solid var(--line) }
+.pt-network svg { display: block; width: 100%; height: auto }
+.pt-l { fill: none; stroke: var(--blue); stroke-width: 1.3; opacity: .35; transition: opacity .3s var(--ease), stroke .3s var(--ease) }
+.pt-l-core { stroke: var(--ink); opacity: .22; stroke-dasharray: 2 5 }
+.pt-l-faint { stroke: var(--ink); opacity: .12; stroke-dasharray: 2 5 }
+.pt-pnode circle { fill: #fff; stroke: var(--blue); stroke-width: 2.4; transition: fill .3s var(--ease) }
+.pt-pnode text { font-family: var(--sans); font-size: 15px; font-weight: 600; fill: var(--ink) }
+.pt-tnode { cursor: pointer }
+.pt-tnode circle { fill: var(--amber); stroke: #fff; stroke-width: 3 }
+.pt-tnode text { font-family: var(--serif); font-size: 17px; font-weight: 600; font-style: italic; fill: var(--blue-700) }
+.pt-tnode:hover text { fill: var(--blue) }
+.pt-core circle { fill: var(--ink) }
+.pt-core text { font-family: var(--serif); font-size: 17px; font-weight: 700; fill: #fff; letter-spacing: .02em }
+.pt-network.has-focus .pt-l, .pt-network.has-focus .pt-pnode, .pt-network.has-focus .pt-tnode { opacity: .2 }
+.pt-network.has-focus .pt-l.is-lit { opacity: .9; stroke: var(--amber); stroke-width: 2.4 }
+.pt-network.has-focus .pt-pnode.is-lit, .pt-network.has-focus .pt-tnode.is-lit { opacity: 1 }
+.pt-network.has-focus .pt-pnode.is-lit circle { fill: var(--amber); stroke: var(--amber) }
+
+.pt-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px }
+.pt-filter {
+  border: 1px solid var(--line); background: #fff; color: var(--ink-soft);
+  padding: 8px 14px; border-radius: 999px; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+  transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease)
+}
+.pt-filter:hover { border-color: var(--blue); color: var(--blue) }
+.pt-filter.is-on { background: var(--ink); border-color: var(--ink); color: #fff }
+
+.pt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px }
+.pt-card {
+  display: flex; flex-direction: column; gap: 6px; padding: 20px 22px;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px;
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease)
+}
+/* the filter hides cards with the hidden attribute */
+.pt-card[hidden] { display: none }
+.pt-card:hover { border-color: var(--blue-100); box-shadow: 0 10px 26px rgba(11,43,92,.09) }
+.pt-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px }
+.pt-chip {
+  font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--blue-700); background: var(--blue-050); padding: 3px 9px; border-radius: 999px
+}
+.pt-name { font-family: var(--serif); font-size: 21px; font-weight: 600; line-height: 1.2 }
+.pt-name-link { color: var(--ink) }
+a.pt-name-link:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 3px }
+.pt-place { font-size: 14px; color: var(--text) }
+.pt-focus { font-size: 15px; color: var(--ink-soft) }
+
+.pt-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 14px }
+.pt-tile {
+  display: flex; flex-direction: column; justify-content: center; gap: 4px; min-height: 96px;
+  padding: 18px 20px; background: #fff; border: 1px solid var(--line); border-radius: 14px; color: var(--ink);
+  transition: border-color .25s var(--ease), transform .25s var(--ease)
+}
+a.pt-tile:hover { border-color: var(--blue); transform: translateY(-2px) }
+.pt-tile-name { font-family: var(--serif); font-size: 20px; font-weight: 600; line-height: 1.2 }
+.pt-tile-sub { font-size: 13.5px; color: var(--text) }
+
+/* ---- Team page: role filter chips ---- */
+.team-filters {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 clamp(24px, 3vw, 36px);
+}
+.team-filter-btn {
+  font-family: var(--sans); font-size: 13.5px; font-weight: 500;
+  padding: 6px 16px; border-radius: 99px; cursor: pointer;
+  border: 1.5px solid var(--line); background: var(--bg);
+  color: var(--ink-soft); transition: border-color .15s, background .15s, color .15s;
+  white-space: nowrap;
+}
+.team-filter-btn:hover { border-color: var(--blue); color: var(--blue) }
+.team-filter-btn.is-active {
+  background: var(--blue); border-color: var(--blue); color: #fff;
+}
+.tmember.is-filtered { display: none }
+.tmember-tag {
+  font-size: 12px; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--blue);
+}

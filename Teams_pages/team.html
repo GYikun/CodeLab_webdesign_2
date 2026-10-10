@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team &middot; CODELAB &mdash; Leiden University</title>
+<meta name="description" content="Meet the CODELAB team at Leiden University - each member's research and life milestones on their own behaviour thread.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231f5ae0'/></svg>">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="CODELAB, Leiden University">
+      <span class="brand-name"><strong>Code</strong>Lab</span>
+      <span class="brand-sub" data-i18n="brandSub">Leiden University</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html" data-i18n="navHome">Home</a>
+        <a href="discoveries.html" data-i18n="navMethods">Discoveries</a>
+        <a href="research.html" data-i18n="navQuestions">Research</a>
+        <a href="partners.html" data-i18n="navPartners">Partners</a>
+        <a href="team.html" class="is-active" data-i18n="navTeam">Team</a>
+        <a href="resources.html" data-i18n="navResources">Resources</a>
+      </nav>
+
+    <div class="header-controls">
+      <a href="https://www.universiteitleiden.nl/en/staffmembers/arko-ghosh" class="btn btn-primary btn-sm nav-cta" data-i18n="navJoin">Join a Study</a>
+
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="nl" type="button">NL</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- CURRENT MEMBERS -->
+<section class="team-section">
+  <div class="wrap">
+
+    <div class="tmember-list" id="staffList"></div>
+
+    <div class="tmember-list" id="studentList"></div>
+
+  </div>
+</section>
+
+<!-- ALUMNI: same cards, collapsed by default, at the foot of the page -->
+<section class="alumni-section">
+  <div class="wrap">
+    <div class="alumni-head reveal">
+      <button class="alumni-toggle" id="alumniToggle" type="button"
+              aria-expanded="false" aria-controls="alumniPanel">
+        <span class="alumni-chev" aria-hidden="true"></span>
+        <span class="alumni-toggle-text" data-i18n="alumniOpen">Show alumni</span>
+        <span class="alumni-count" id="alumniCount"></span>
+      </button>
+    </div>
+    <div id="alumniPanel" class="tmember-list" hidden></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-brand"><strong>Code</strong>Lab</span>
+      <span class="footer-sub" data-i18n="brandSub">Leiden University</span>
+    </div>
+    <p class="footer-note">&copy; <span id="year">2026</span> <span data-i18n="footerNote">CODELAB, Leiden University. Wassenaarseweg 52, Leiden.</span></p>
+  </div>
+</footer>
+
+<script src="js/main.js" charset="utf-8"></script>
+<script src="js/data.js" charset="utf-8"></script>
+<script src="js/team.js?v=6" charset="utf-8"></script>
+<script>
+/* renderTeam() builds the member threads and returns the EN/NL strings
+   for everything it generated. Merge them into the page dictionary so
+   the existing data-i18n machinery in main.js drives both.
+
+   All non-ASCII text below is written as \uXXXX escapes on purpose, so
+   this file survives being saved in any encoding. */
+/* Fail loudly if the team styles (in css/styles.css) are missing - without them the avatars
+   expand and the whole card layout collapses, which is hard to
+   diagnose from the page alone. */
+(function () {
+  var probe = document.createElement('div');
+  probe.className = 'tmember';
+  probe.style.position = 'absolute';
+  probe.style.visibility = 'hidden';
+  document.body.appendChild(probe);
+  var loaded = getComputedStyle(probe).borderTopWidth !== '0px';
+  probe.remove();
+  if (!loaded) {
+    console.error('[CodeLab] team styles did not load. The team page ' +
+      'will render unstyled (oversized avatars, collapsed cards). ' +
+      'Check that css/styles.css exists and the <link> tag path is correct.');
+  }
+})();
+
+/* Members come from data/team.json; their topic buttons use the short
+   names in data/questions.json. */
+CodeLabData.load(['team', 'questions']).then(function (data) {
+  var threads = { en: {}, nl: {} };
+  if (!data.team) {
+    CodeLabData.showError(document.getElementById('staffList'));
+    document.querySelector('.alumni-section').hidden = true;
+  } else {
+    threads = renderTeam(data.team, data.questions);
+  }
+  initSite({
+    en: Object.assign({}, threads.en),
+    nl: Object.assign({}, threads.nl)
+  });
+});
+</script>
+</body>
+</html>
