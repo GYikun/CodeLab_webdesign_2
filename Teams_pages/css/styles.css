@@ -199,6 +199,10 @@ a:hover .arrow, button:hover .arrow { transform: translateX(4px) }
 }
 .is-high .thread-text { grid-row: 1; align-self: end; padding-bottom: 6px }
 .is-low .thread-text { grid-row: 3; align-self: start; padding-top: 6px }
+.thread-text a {
+  color: inherit; text-decoration: none; transition: color .15s
+}
+.thread-text a:hover { color: var(--blue) }
 .thread-era {
   display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
   color: #A86A00; margin-bottom: 4px
@@ -552,6 +556,14 @@ a.disc-card:hover .disc-read { color: var(--blue-700) }
   object-fit: cover; border-radius: 50%
 }
 .tmember-name { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.3 }
+.orcid-badge {
+  display: inline-block; margin-left: 5px;
+  padding: 1px 5px; font-size: 11px; font-weight: 700; font-style: italic;
+  color: #fff; background: #A6CE39; border-radius: 3px;
+  vertical-align: middle; line-height: 16px; text-decoration: none;
+  transition: background .15s
+}
+.orcid-badge:hover { background: #7faa1e }
 /* only rendered for alumni - current members show no role */
 .tmember-role { font-size: 13px; color: var(--text); line-height: 1.4 }
 .tmember-link {
@@ -790,4 +802,69 @@ a.pt-tile:hover { border-color: var(--blue); transform: translateY(-2px) }
 .tmember-tag {
   font-size: 12px; font-weight: 600; letter-spacing: .06em;
   text-transform: uppercase; color: var(--blue);
+}
+
+/* ==========================================================
+   News section — Resources page
+   ========================================================== */
+.news-details { margin-top: 0 }
+.news-details[open] .news-summary { margin-bottom: 16px }
+.news-summary {
+  list-style: none; display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px; border-radius: 6px;
+  background: var(--bg-soft); border: 1.5px solid var(--line);
+  font-size: 15px; font-weight: 600; color: var(--ink);
+  cursor: pointer; user-select: none;
+  transition: border-color .15s, background .15s;
+}
+.news-summary::-webkit-details-marker { display: none }
+.news-summary::before {
+  content: '';
+  display: inline-block; width: 0; height: 0;
+  border-top: 5px solid transparent; border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--blue);
+  transition: transform .2s var(--ease);
+}
+.news-details[open] .news-summary::before { transform: rotate(90deg) }
+.news-summary:hover { border-color: var(--blue); background: var(--blue-050) }
+.news-list {
+  display: flex; flex-direction: column; gap: 0;
+  border: 1.5px solid var(--line); border-radius: 8px; overflow: hidden;
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 120px 56px 1fr;
+  align-items: center;
+  gap: 0 16px;
+  padding: 13px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: background .15s;
+}
+.news-item:last-child { border-bottom: none }
+.news-item:hover { background: var(--blue-050) }
+.news-outlet {
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: .04em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.news-year {
+  font-size: 13px; font-weight: 500; color: var(--text);
+  text-align: right; white-space: nowrap;
+}
+.news-headline {
+  font-size: 15px; color: var(--ink-soft); line-height: 1.4;
+}
+.news-item:hover .news-headline { color: var(--blue) }
+
+@media (max-width: 600px) {
+  .news-item {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 2px 8px;
+  }
+  .news-outlet { grid-column: 1; grid-row: 1 }
+  .news-year   { grid-column: 2; grid-row: 1 }
+  .news-headline { grid-column: 1 / -1; grid-row: 2; font-size: 14px }
 }

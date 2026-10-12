@@ -145,9 +145,13 @@ CodeLabData.load(['home', 'milestones']).then(function (data) {
       '<ol class="thread-list">' + items.map(function (m, i) {
         var era = m.status === 'today' ? '<span class="thread-era" data-i18n="tlEraToday">Now</span>'
                 : m.status === 'future' ? '<span class="thread-era" data-i18n="tlEraFuture">Next</span>' : '';
+        var inner = '<span data-i18n="' + D.addText(pageText, 'milestone' + i, m.text) + '"></span>';
+        var linked = m.url
+          ? '<a href="' + D.esc(m.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+          : inner;
         return '<li class="thread-step is-' + D.esc(m.status || 'normal') + (i % 2 ? ' is-low' : ' is-high') + '" style="--i:' + i + '">' +
           '<span class="thread-node" aria-hidden="true"></span>' +
-          '<span class="thread-text">' + era + '<span data-i18n="' + D.addText(pageText, 'milestone' + i, m.text) + '"></span></span>' +
+          '<span class="thread-text">' + era + linked + '</span>' +
         '</li>';
       }).join('') + '</ol>';
   }

@@ -82,6 +82,70 @@
     return 'animation-delay:' + delay.toFixed(2) + 's' + (opacity != null ? ';--o:' + opacity.toFixed(2) : '');
   }
 
+  /* ---------- JID helpers: stylised joint-interval distributions ----------
+     u = interval k, v = interval k+1, both on a 0-1 (log) scale.
+     A fast "burst" cluster, burst exits (short then long), burst entries
+     (long then short) and a slow cluster, drawn as halftone dots. */
+  function jidField(n, p, r) {
+    p = p || {};
+    var fx = p.fx != null ? p.fx : .27, fy = p.fy != null ? p.fy : .27, fs = p.fs || .07;
+    var comps = [
+      [fx, fy, fs, fs, 1],
+      [fx, .68, .06, .12, p.exit != null ? p.exit : .45],
+      [.68, fy, .12, .06, p.entry != null ? p.entry : .3],
+      [.7, .72, .13, .13, p.slow != null ? p.slow : .3]
+    ];
+    var g = [], max = 0, i, j;
+    for (i = 0; i < n; i++) {
+      g.push([]);
+      for (j = 0; j < n; j++) {
+        var u = (i + .5) / n, v = (j + .5) / n, d = 0;
+        comps.forEach(function (c) {
+          d += c[4] * Math.exp(-Math.pow(u - c[0], 2) / (2 * c[2] * c[2]) - Math.pow(v - c[1], 2) / (2 * c[3] * c[3]));
+        });
+        d *= Math.max(0, 1 + (p.noise || .12) * gauss(r));
+        if (p.mask) d *= p.mask(u, v);
+        g[i].push(d); if (d > max) max = d;
+      }
+    }
+    /* compress the scale so slower, rarer behaviour stays visible */
+    for (i = 0; i < n; i++) for (j = 0; j < n; j++) g[i][j] = Math.pow(g[i][j] / max, p.gamma || .5);
+    return g;
+  }
+  var JID_LEVELS = [
+    { min: .2, c: C.blue100, w: .3 }, { min: .32, c: C.blue100, w: .44 },
+    { min: .45, c: C.blue, w: .5, o: .55 }, { min: .6, c: C.blue, w: .62 },
+    { min: .76, c: C.blue700, w: .74 }, { min: .9, c: C.ink, w: .86 }, { min: .985, c: C.amber, w: .95 }
+  ];
+  /* Draw a field as a halftone square at (x, y) with side `size`. */
+  function drawJid(g, field, x, y, size, opts) {
+    opts = opts || {};
+    var n = field.length, cell = size / n, buckets = JID_LEVELS.map(function () { return []; });
+    var peak = [x, y];
+    for (var i = 0; i < n; i++) for (var j = 0; j < n; j++) {
+      var d = field[i][j], L = -1;
+      for (var k = 0; k < JID_LEVELS.length; k++) if (d >= JID_LEVELS[k].min) L = k;
+      if (L < 0) continue;
+      var px = x + (i + .5) * cell, py = y + size - (j + .5) * cell;
+      buckets[L].push([px, py]);
+      if (d === 1) peak = [px, py];
+    }
+    if (opts.frame !== false) g.el('rect', { x: f(x), y: f(y), width: f(size), height: f(size), rx: f(size * .04), fill: '#fff', opacity: opts.frameOpacity || .55 });
+    buckets.forEach(function (list, k) {
+      if (!list.length) return;
+      var lv = JID_LEVELS[k];
+      g.dots(list, opts.mono || lv.c, f(cell * lv.w), { opacity: lv.o || 1, class: opts.anim === false ? null : 'art-fade', style: opts.anim === false ? null : fade((opts.delay || 0) + k * .08, lv.o || 1) });
+    });
+    return peak;
+  }
+  function jidOutline(g, field, x, y, size, color) {
+    var n = field.length, cell = size / n, list = [];
+    for (var i = 0; i < n; i++) for (var j = 0; j < n; j++)
+      if (field[i][j] > .55) list.push([x + (i + .5) * cell, y + size - (j + .5) * cell]);
+    g.path(list.map(function (p) { return 'M' + f(p[0] + cell * .32) + ' ' + f(p[1]) + 'a' + f(cell * .32) + ' ' + f(cell * .32) + ' 0 1 0 -' + f(cell * .64) + ' 0a' + f(cell * .32) + ' ' + f(cell * .32) + ' 0 1 0 ' + f(cell * .64) + ' 0'; }).join(''),
+      { fill: 'none', stroke: color, 'stroke-width': 1, opacity: .55 });
+  }
+
   /* ---------- motifs ---------- */
   var MOTIFS = {
 
@@ -259,6 +323,101 @@
         g.path(poly(pts), { fill: 'none', stroke: near ? C.amber : C.ink, 'stroke-width': near ? 3 : 1.4, opacity: near ? .95 : .45, 'stroke-linecap': 'round', class: 'art-draw', pathLength: 1, style: fade(k * .07) });
       }
       g.circle(sx, sy, 8, { fill: C.ink });
+    },
+
+    /* ---------- Questions page: variations on the JID ---------- */
+
+    /* The map itself, with its two axes */
+    'jid-map': function (g, r) {
+      g.background();
+      var x = 120, y = 30, s = 280;
+      g.circle(x + s * .3, y + s * .7, 150, { fill: g.glow(C.blue, .1) });
+      drawJid(g, jidField(34, {}, r), x, y, s);
+      g.path('M' + (x - 14) + ' ' + (y + s + 14) + 'H' + (x + s + 4) + 'M' + (x - 14) + ' ' + (y + s + 14) + 'V' + (y - 4), { stroke: C.ink, 'stroke-width': 1.6, fill: 'none', opacity: .6 });
+      g.path('M' + (x + s - 4) + ' ' + (y + s + 9) + 'l9 5-9 5M' + (x - 19) + ' ' + (y + 5) + 'l5-9 5 9', { stroke: C.ink, 'stroke-width': 1.6, fill: 'none', opacity: .6, 'stroke-linejoin': 'round' });
+    },
+
+    /* Across the lifespan: the same map at four ages, slowly shifting */
+    'jid-lifespan': function (g, r) {
+      g.background();
+      var s = 146, pos = [[86, 24], [248, 24], [86, 190], [248, 190]], peaks = [];
+      pos.forEach(function (q, k) {
+        var a = k / 3;
+        peaks.push(drawJid(g, jidField(24, { fx: .25 + a * .08, fy: .25 + a * .06, fs: .062 + a * .022, exit: .5 - a * .14, slow: .26 + a * .12 }, r), q[0], q[1], s, { delay: k * .25 }));
+      });
+      g.path(poly(peaks), { fill: 'none', stroke: C.amber, 'stroke-width': 2.4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-dasharray': '2 6', opacity: .9 });
+    },
+
+    /* Days to years: a ribbon of daily maps; their peaks trace a trajectory */
+    'jid-trajectory': function (g, r) {
+      g.background();
+      var peaks = [], n = 10, drift = r() * TAU;
+      for (var k = 0; k < n; k++) {
+        var t = k / (n - 1), s = 44 + t * 52;
+        var x = 18 + t * 350, y = 200 - Math.sin(t * Math.PI * 1.2 + .3) * 100 - t * 60;
+        var fx = .27 + .07 * Math.sin(t * 5 + drift), fy = .27 + .07 * Math.cos(t * 4 + drift);
+        peaks.push(drawJid(g, jidField(16, { fx: fx, fy: fy, fs: .08, noise: .2 }, r), x, y, s, { delay: t * .9, frameOpacity: .8 }));
+      }
+      g.path(poly(peaks), { fill: 'none', stroke: C.amber, 'stroke-width': 2.6, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', class: 'art-draw', pathLength: 1, style: fade(.6) });
+    },
+
+    /* Brain and behaviour: neural rhythms flowing into the map */
+    'jid-neural': function (g, r) {
+      g.background();
+      var x = 236, y = 64, s = 230, field = jidField(30, {}, r);
+      var peak = drawJid(g, field, x, y, s);
+      for (var w = 0; w < 6; w++) {
+        var y0 = 70 + w * 42, freq = .08 + w * .025, amp = 5 + r() * 6, pts = [];
+        for (var px = 16; px <= 200; px += 3) {
+          var k = (px - 16) / 184, ty = y0 + (peak[1] - y0) * k * k;
+          pts.push([px, ty + Math.sin(px * freq + w) * amp * (1 - k * .7)]);
+        }
+        pts.push([peak[0] - 20, peak[1]]);
+        g.path(poly(pts), { fill: 'none', stroke: w % 3 === 1 ? C.amber : (w % 2 ? C.ink : C.blue), 'stroke-width': w % 3 === 1 ? 2.2 : 1.5, opacity: .8, 'stroke-linecap': 'round', class: 'art-draw', pathLength: 1, style: fade(w * .12) });
+      }
+    },
+
+    /* Disease: an ordered map beside a disrupted one */
+    'jid-disorder': function (g, r) {
+      g.background();
+      var s = 196;
+      drawJid(g, jidField(26, {}, r), 30, 82, s);
+      var holes = [];
+      for (var h = 0; h < 5; h++) holes.push([.15 + r() * .7, .15 + r() * .7, .05 + r() * .07]);
+      var field = jidField(26, { fx: .33, fy: .31, fs: .11, exit: .62, slow: .5, noise: .45, mask: function (u, v) {
+        var m = 1;
+        holes.forEach(function (hh) { if (Math.hypot(u - hh[0], v - hh[1]) < hh[2]) m = .05; });
+        return m;
+      } }, r);
+      drawJid(g, field, 254, 82, s, { delay: .4 });
+      holes.forEach(function (hh) {
+        g.circle(254 + hh[0] * s, 82 + s - hh[1] * s, hh[2] * s, { fill: 'none', stroke: C.amber, 'stroke-width': 1.6, 'stroke-dasharray': '2 4', class: 'art-pulse' });
+      });
+    },
+
+    /* Constraints: mass pressed against a boundary it cannot cross */
+    constraint: function (g, r) {
+      g.background();
+      var x = 110, y = 30, s = 290, R = .34;
+      var field = jidField(34, { fx: .36, fy: .36, fs: .09, mask: function (u, v) {
+        var d = Math.hypot(u, v);
+        return d < R ? 0 : 1 + 1.4 * Math.exp(-Math.pow((d - R) / .05, 2));
+      } }, r);
+      drawJid(g, field, x, y, s);
+      var arc = [];
+      for (var i = 0; i <= 40; i++) { var t = i / 40 * Math.PI / 2; arc.push([x + Math.cos(t) * R * s, y + s - Math.sin(t) * R * s]); }
+      g.path(poly(arc), { fill: 'none', stroke: C.amber, 'stroke-width': 3, 'stroke-linecap': 'round', class: 'art-draw', pathLength: 1 });
+    },
+
+    /* Complexity and time: the map against its own time-reversal */
+    complexity: function (g, r) {
+      g.background();
+      var x = 110, y = 30, s = 290;
+      var field = jidField(30, { exit: .62, entry: .18 }, r), tr = [];
+      for (var i = 0; i < field.length; i++) { tr.push([]); for (var j = 0; j < field.length; j++) tr[i].push(field[j][i]); }
+      drawJid(g, field, x, y, s);
+      jidOutline(g, tr, x, y, s, C.ink);
+      g.path('M' + x + ' ' + (y + s) + 'L' + (x + s) + ' ' + y, { stroke: C.amber, 'stroke-width': 2.4, 'stroke-dasharray': '3 6', 'stroke-linecap': 'round' });
     },
 
     /* Fallback for new discoveries: one of several abstract styles, picked

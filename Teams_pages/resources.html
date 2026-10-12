@@ -98,6 +98,25 @@
   </div>
 </section>
 
+
+<section class="resources-section news-section">
+  <div class="wrap">
+    <div class="res-block" id="news">
+      <div class="res-head reveal">
+        <div class="res-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg></div>
+        <div>
+          <h2 class="res-title" data-i18n="newsTitle">In the news</h2>
+          <p class="res-sub" data-i18n="newsSub">Media coverage of our research.</p>
+        </div>
+      </div>
+      <details class="news-details">
+        <summary class="news-summary" data-i18n="newsOpen">Show coverage</summary>
+        <div class="news-list" id="newsList"></div>
+      </details>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
@@ -133,7 +152,10 @@ var pageText = {
     codeTitle: "Code",
     codeSub: "Open-source code from our projects.",
     srcGithub: "GitHub",
-    viewGithub: "View on GitHub <span class=\"arrow\">→</span>"
+    viewGithub: "View on GitHub <span class=\"arrow\">→</span>",
+    newsTitle: "In the news",
+    newsSub: "Media coverage of our research.",
+    newsOpen: "Show coverage"
   },
   nl: {
     pubsTitle: "Publicaties",
@@ -154,7 +176,10 @@ var pageText = {
     codeTitle: "Code",
     codeSub: "Opensourcecode uit onze projecten.",
     srcGithub: "GitHub",
-    viewGithub: "Bekijk op GitHub <span class=\"arrow\">→</span>"
+    viewGithub: "Bekijk op GitHub <span class=\"arrow\">→</span>",
+    newsTitle: "In the nieuws",
+    newsSub: "Mediaberichtgeving over ons onderzoek.",
+    newsOpen: "Berichtgeving tonen"
   }
 };
 
@@ -165,7 +190,7 @@ var RESOURCE_TYPES = {
   code:   { block: 'code',    label: 'srcGithub',    button: 'viewGithub' }
 };
 
-CodeLabData.load(['team', 'resources']).then(function (data) {
+CodeLabData.load(['team', 'resources', 'news']).then(function (data) {
   var D = CodeLabData;
   function grid(block) { return document.querySelector('#' + block + ' .resource-grid'); }
   function card(url, labelKey, nameHtml, descHtml, buttonKey, i) {
@@ -206,6 +231,22 @@ CodeLabData.load(['team', 'resources']).then(function (data) {
         ' data-i18n="' + D.addText(pageText, key + 'Desc', r.summary) + '">', t.button, i);
     }));
   });
+
+  /* In the news */
+  var newsList = document.getElementById('newsList');
+  if (newsList) {
+    if (!data.news || !data.news.length) {
+      document.getElementById('news') && document.getElementById('news').remove();
+    } else {
+      newsList.innerHTML = data.news.map(function (n) {
+        return '<a class="news-item" href="' + D.esc(n.url) + '" target="_blank" rel="noopener">' +
+          '<span class="news-outlet">' + D.esc(n.outlet) + '</span>' +
+          '<span class="news-year">' + D.esc(String(n.year)) + '</span>' +
+          '<span class="news-headline">' + D.esc(n.title) + '</span>' +
+        '</a>';
+      }).join('');
+    }
+  }
 
   initSite(pageText);
 });

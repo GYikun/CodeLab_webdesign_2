@@ -66,6 +66,7 @@
       var m = {
         id: p.id,
         name: p.name,
+        orcid: p.orcid || '',
         roleKey: roleKey,
         photo: p.photo || '',
         href: q ? 'questions.html#' + q.id : '',
@@ -296,6 +297,16 @@
     var idBox = el('div', 'tmember-id', head);
     var nm = el('p', 'tmember-name', idBox);
     nm.textContent = m.name;
+    if (m.orcid) {
+      var badge = document.createElement('a');
+      badge.className = 'orcid-badge';
+      badge.href = m.orcid;
+      badge.target = '_blank';
+      badge.rel = 'noopener';
+      badge.setAttribute('aria-label', 'ORCID profile');
+      badge.textContent = 'iD';
+      nm.appendChild(badge);
+    }
     /* Roles are not shown for current members. Alumni keep theirs, since
        it is the only per-card marker that the project has finished. */
     if (isAlumni) {

@@ -2,57 +2,55 @@
   {
     "time": "2014",
     "status": "normal",
+    "url": "https://doi.org/10.1016/j.cub.2014.11.026",
     "text": {
-      "en": "WIRED covers the smartphone-shaped brain",
-      "nl": "WIRED bericht over het door smartphones gevormde brein"
+      "en": "Smartphone use helps reveal brain plasticity",
+      "nl": "Smartphonegebruik helpt hersenplasticiteit te onthullen"
     }
   },
   {
     "time": "2019",
     "status": "normal",
+    "url": "https://doi.org/10.1038/s41746-021-00466-9",
     "text": {
-      "en": "First sleep-wake cycles captured from smartphone taps",
-      "nl": "Eerste slaap-waakcycli vastgelegd via smartphonetikken"
+      "en": "Touchscreen interactions capture sleep-wake cycles",
+      "nl": "Touchscreen-interacties leggen slaap-waakcycli vast"
     }
   },
   {
     "time": "2021",
     "status": "normal",
+    "url": "https://doi.org/10.1016/j.isci.2021.102538",
     "text": {
-      "en": "The Guardian names the field “tappigraphy”",
-      "nl": "The Guardian noemt het veld “tappigraphy”"
-    }
-  },
-  {
-    "time": "2022",
-    "status": "normal",
-    "text": {
-      "en": "AI traces ageing and disease in touch dynamics",
-      "nl": "AI traceert veroudering en ziekte in aanraakpatronen"
+      "en": "AI traces epileptiform activity from touchscreen interactions",
+      "nl": "AI traceert epileptiforme activiteit via touchscreen-interacties"
     }
   },
   {
     "time": "2023",
     "status": "normal",
+    "url": "https://doi.org/10.1038/s41746-023-00799-7",
     "text": {
       "en": "Multi-day rhythms found in smartphone use",
       "nl": "Meerdaagse ritmes ontdekt in smartphonegebruik"
     }
   },
   {
-    "time": "",
+    "time": "2024",
     "status": "today",
+    "url": "https://doi.org/10.1073/pnas.2311865121",
     "text": {
-      "en": "Neural implants and smartphone data combined",
-      "nl": "Hersenimplantaten en smartphonedata gecombineerd"
+      "en": "Human behavioural trajectories across the lifespan",
+      "nl": "Menselijke gedragstrajecten over de levensloop"
     }
   },
   {
     "time": "",
     "status": "future",
+    "url": "",
     "text": {
-      "en": "Spin-offs bring findings into the clinic",
-      "nl": "Spin-offs brengen bevindingen naar de kliniek"
+      "en": "Clinical applications and informed behavioural choices",
+      "nl": "Klinische toepassingen en bewuste gedragskeuzes"
     }
   }
 ]
