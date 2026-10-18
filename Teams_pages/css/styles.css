@@ -808,6 +808,17 @@ a.pt-tile:hover { border-color: var(--blue); transform: translateY(-2px) }
    News section — Discoveries page (between the papers and the video)
    ========================================================== */
 .disc-news { margin-top: clamp(56px, 6vw, 80px) }
+/* "Featured in" row: outlet names linking to the article (data/news.json -> featured) */
+.press-featured {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px;
+  padding: clamp(24px, 3vw, 36px) 0; margin-bottom: 18px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)
+}
+.press-featured[hidden] { display: none }
+.press-label { font-size: 12.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue) }
+.press-outlets { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline }
+.press-outlets a { font-family: var(--serif); font-size: clamp(19px, 1.7vw, 24px); font-weight: 600; color: var(--ink); opacity: .78; transition: opacity .2s var(--ease), color .2s var(--ease) }
+.press-outlets a:hover { opacity: 1; color: var(--blue) }
 .news-details { margin-top: 0 }
 .news-details[open] .news-summary { margin-bottom: 16px }
 .news-summary {

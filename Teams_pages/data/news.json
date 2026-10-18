@@ -3,7 +3,8 @@
     "outlet": "Vox",
     "title": "How we lost our sense of touch",
     "year": 2026,
-    "url": "https://www.vox.com/the-highlight/492761/touch-screens-smartphone-loss"
+    "url": "https://www.vox.com/the-highlight/492761/touch-screens-smartphone-loss",
+    "featured": true
   },
   {
     "outlet": "MT/integraal",
@@ -15,7 +16,8 @@
     "outlet": "The Guardian",
     "title": "The dawn of tappigraphy: does your smartphone know how you feel before you do?",
     "year": 2021,
-    "url": "https://www.theguardian.com/technology/2021/nov/07/the-dawn-of-tappigraphy-does-your-smartphone-know-how-you-feel-before-you-do"
+    "url": "https://www.theguardian.com/technology/2021/nov/07/the-dawn-of-tappigraphy-does-your-smartphone-know-how-you-feel-before-you-do",
+    "featured": true
   },
   {
     "outlet": "The Correspondent",
@@ -27,37 +29,43 @@
     "outlet": "Business Insider",
     "title": "This is what your smartphone is doing to your brain — and it isn’t good",
     "year": 2019,
-    "url": "https://www.businessinsider.com/what-your-smartphone-is-doing-to-your-brain-and-it-isnt-good-2018-3"
+    "url": "https://www.businessinsider.com/what-your-smartphone-is-doing-to-your-brain-and-it-isnt-good-2018-3",
+    "featured": true
   },
   {
     "outlet": "Reuters",
     "title": "Smartphone use changing our brain and thumb interaction, say researchers",
     "year": 2015,
-    "url": "https://www.reuters.com/article/technology/smartphone-use-changing-our-brain-and-thumb-interaction-say-researchers-idUSKBN0ML1DS/"
-  },
-  {
-    "outlet": "WIRED",
-    "title": "Our brains are being ‘continuously reshaped’ by smartphone use",
-    "year": 2014,
-    "url": "https://www.wired.com/story/touchscreen-brain-thumbs/"
+    "url": "https://www.reuters.com/article/technology/smartphone-use-changing-our-brain-and-thumb-interaction-say-researchers-idUSKBN0ML1DS/",
+    "featured": true
   },
   {
     "outlet": "BBC News",
     "title": "Smartphone use ‘changing our brains’",
     "year": 2014,
-    "url": "https://www.bbc.com/news/health-30586017"
+    "url": "https://www.bbc.com/news/health-30586017",
+    "featured": true
+  },
+  {
+    "outlet": "WIRED",
+    "title": "Our brains are being ‘continuously reshaped’ by smartphone use",
+    "year": 2014,
+    "url": "https://www.wired.com/story/touchscreen-brain-thumbs/",
+    "featured": true
   },
   {
     "outlet": "Scientific American",
     "title": "Smartphone Use Appears to Change How Brains and Thumbs Interact",
     "year": 2014,
-    "url": "https://www.scientificamerican.com/article/smartphone-use-appears-to-change-how-brains-and-thumbs-interact/"
+    "url": "https://www.scientificamerican.com/article/smartphone-use-appears-to-change-how-brains-and-thumbs-interact/",
+    "featured": true
   },
   {
     "outlet": "NBC News",
     "title": "Smartphone Use Supercharges Thumb Control in the Brain",
     "year": 2014,
-    "url": "https://www.nbcnews.com/tech/mobile/smartphone-use-supercharges-thumb-control-brain-n274041"
+    "url": "https://www.nbcnews.com/tech/mobile/smartphone-use-supercharges-thumb-control-brain-n274041",
+    "featured": true
   },
   {
     "outlet": "Live Science",

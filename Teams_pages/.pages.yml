@@ -67,6 +67,18 @@ content:
     path: data/home.json
     format: json
     fields:
+      - name: prelude
+        label: Prelude
+        description: "The short paragraph above the homepage title."
+        component: i18n-text
+      - name: title
+        label: Title (first part)
+        description: "e.g. Now, an observatory for"
+        component: i18n-string
+      - name: highlight
+        label: Title (highlighted part)
+        description: "Shown in blue italics after the first part, e.g. human behaviour"
+        component: i18n-string
       - name: intro
         label: Intro text
         description: "The paragraph under the homepage title."
@@ -102,6 +114,43 @@ content:
         label: Text
         description: "One short sentence (about 40 characters)."
         component: i18n-string
+      - name: url
+        label: Link (optional)
+        type: string
+        description: "Makes the milestone text a link, e.g. the paper's DOI (https://doi.org/...)."
+        pattern:
+          regex: "^(https://\\S+)?$"
+          message: "Must be a full link starting with https://"
+
+  - name: questions-page
+    label: Research page text
+    type: file
+    path: data/questions-page.json
+    format: json
+    fields:
+      - name: title
+        label: Title (first part)
+        component: i18n-string
+      - name: highlight
+        label: Title (highlighted part)
+        component: i18n-string
+      - name: intro
+        label: Intro paragraph (optional)
+        description: "Hidden while the English text is empty."
+        component: i18n-text-optional
+      - name: frameworkTitle
+        label: Animation heading
+        description: "Heading above the 'map of behaviour' animation."
+        component: i18n-string
+      - name: frameworkText
+        label: Animation text
+        component: i18n-text
+      - name: flowCaption
+        label: Left animation caption
+        component: i18n-string
+      - name: mapCaption
+        label: Right animation caption
+        component: i18n-string
 
   - name: questions
     label: Research questions
@@ -128,6 +177,45 @@ content:
       - name: answer
         label: Answer
         component: i18n-text
+      - name: art
+        label: Artwork style
+        type: select
+        description: "The abstract artwork drawn on the card when no image is uploaded. Empty or Automatic = a style picked from the title. New styles are added in js/discovery-art.js (MOTIFS) and then listed here."
+        options:
+          values:
+            - { name: auto, label: Automatic }
+            - { name: resilience, label: Resilience }
+            - { name: multiday, label: Multi-day rhythms }
+            - { name: goal, label: Goal }
+            - { name: behavioural-age, label: Behavioural age }
+            - { name: sound, label: Sound }
+            - { name: epilepsy, label: Epilepsy }
+            - { name: sleep, label: Sleep }
+            - { name: dopamine, label: Dopamine }
+            - { name: plasticity, label: Plasticity }
+            - { name: constraint, label: Constraint }
+            - { name: complexity, label: Complexity }
+            - { name: jid-map, label: "JID: map" }
+            - { name: jid-lifespan, label: "JID: lifespan" }
+            - { name: jid-trajectory, label: "JID: trajectory" }
+            - { name: jid-neural, label: "JID: neural" }
+            - { name: jid-disorder, label: "JID: disorder" }
+
+  - name: discoveries-page
+    label: Discoveries page text
+    type: file
+    path: data/discoveries-page.json
+    format: json
+    fields:
+      - name: title
+        label: Title (first part)
+        component: i18n-string
+      - name: highlight
+        label: Title (highlighted part)
+        component: i18n-string
+      - name: intro
+        label: Intro paragraph
+        component: i18n-text
 
   - name: discoveries
     label: Discoveries (papers)
@@ -145,9 +233,32 @@ content:
       - name: image
         label: Image or GIF
         type: image
-        description: "Optional. Keep GIFs small (under about 2 MB) so the page loads quickly."
+        description: "Optional. Replaces the drawn artwork. Keep GIFs small (under about 2 MB) so the page loads quickly."
         options:
           media: pub
+      - name: art
+        label: Artwork style
+        type: select
+        description: "The abstract artwork drawn on the card when no image is uploaded. Empty or Automatic = a style picked from the title. New styles are added in js/discovery-art.js (MOTIFS) and then listed here."
+        options:
+          values:
+            - { name: auto, label: Automatic }
+            - { name: resilience, label: Resilience }
+            - { name: multiday, label: Multi-day rhythms }
+            - { name: goal, label: Goal }
+            - { name: behavioural-age, label: Behavioural age }
+            - { name: sound, label: Sound }
+            - { name: epilepsy, label: Epilepsy }
+            - { name: sleep, label: Sleep }
+            - { name: dopamine, label: Dopamine }
+            - { name: plasticity, label: Plasticity }
+            - { name: constraint, label: Constraint }
+            - { name: complexity, label: Complexity }
+            - { name: jid-map, label: "JID: map" }
+            - { name: jid-lifespan, label: "JID: lifespan" }
+            - { name: jid-trajectory, label: "JID: trajectory" }
+            - { name: jid-neural, label: "JID: neural" }
+            - { name: jid-disorder, label: "JID: disorder" }
       - name: authors
         label: Authors
         type: string
@@ -192,6 +303,36 @@ content:
         options:
           media: pub
 
+  - name: partners-page
+    label: Partners page text
+    type: file
+    path: data/partners-page.json
+    format: json
+    fields:
+      - name: title
+        label: Title (first part)
+        component: i18n-string
+      - name: highlight
+        label: Title (highlighted part)
+        component: i18n-string
+      - name: themes
+        label: Research themes
+        type: object
+        list: true
+        description: "The theme filter buttons and network labels on the Partners page. When adding or removing a theme, also update the 'Themes' options under Partners."
+        fields:
+          - name: id
+            label: ID
+            type: string
+            required: true
+            description: "Short fixed name, lowercase with hyphens (e.g. brain-recordings). Partners link to it; do not change it once in use."
+            pattern:
+              regex: "^[a-z0-9]+(-[a-z0-9]+)*$"
+              message: "Lowercase letters, numbers and hyphens only"
+          - name: label
+            label: Label
+            component: i18n-string
+
   - name: partners
     label: Partners
     type: file
@@ -202,6 +343,10 @@ content:
       - name: name
         label: Name
         component: i18n-string
+      - name: short
+        label: Short name (optional)
+        type: string
+        description: "Label in the network diagram, e.g. Yale. Empty = the full English name."
       - name: group
         label: Group
         type: select
@@ -210,10 +355,30 @@ content:
           values:
             - name: research
               label: Research partner
-            - name: support
-              label: Supported by
+            - name: funder
+              label: Funder (Funded by)
             - name: spinoff
               label: Spin-off
+      - name: themes
+        label: Themes
+        type: select
+        description: "Research partners only. Keep these options in sync with the theme IDs under Partners page text."
+        options:
+          multiple: true
+          values:
+            - { name: epilepsy, label: Epilepsy }
+            - { name: brain-recordings, label: Brain recordings }
+            - { name: sleep, label: Sleep }
+            - { name: adolescence, label: Adolescence }
+            - { name: ageing, label: Ageing }
+            - { name: physical-activity, label: Physical activity }
+            - { name: complex-systems, label: Complex systems }
+            - { name: cognition, label: Cognition }
+            - { name: rehabilitation, label: Rehabilitation }
+      - name: focus
+        label: Focus (optional)
+        description: "Research partners only: one line under the name, e.g. Invasive EEG recordings."
+        component: i18n-string-optional
       - name: location
         label: Location
         description: "City or country. Optional for spin-offs."
@@ -234,6 +399,7 @@ content:
           message: "Must be a full link starting with https://"
       - name: contact
         label: Contact person (optional)
+        description: "Stored only: the site does not display this at the moment."
         type: object
         fields:
           - name: name
@@ -303,6 +469,14 @@ content:
         label: Role
         description: "Master's students: include 'MSc' in the English role (e.g. MSc thesis student). They are listed after the staff."
         component: i18n-string
+      - name: tag
+        label: Filter tags
+        type: select
+        required: true
+        description: "Which filter buttons on the Team page show this person. Current members: pick one. Alumni: pick Alumni plus their former role; both are shown on the card. A new tag name also needs adding to TAG_ORDER in js/team.js."
+        options:
+          multiple: true
+          values: [Principal Investigator, Researcher, Visiting Researcher, MSc Student, Pre-University, Alumni]
       - name: status
         label: Status
         type: select
@@ -390,6 +564,10 @@ content:
     format: json
     list: true
     fields:
+      - name: featured
+        label: Featured in
+        type: boolean
+        description: "Ticked = the outlet name is also shown in the 'Featured in' row at the top of In the news (in the order of this list)."
       - name: outlet
         label: Outlet
         type: string
