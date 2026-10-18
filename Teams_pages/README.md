@@ -37,7 +37,7 @@ Pages load their content with `fetch()`, which browsers block on `file://` pages
 | `research.html` | `/research` | Research questions + "map of behaviour" animation |
 | `partners.html` | `/partners` | Research partners, funders, spin-offs |
 | `team.html` | `/team` | Team member cards + personal timelines |
-| `resources.html` | `/resources` | Publications (via profiles), patents, datasets, code repositories |
+| `resources.html` | `/resources` | Publications (via Arko Ghosh's profiles), patents, datasets, code repositories |
 
 ---
 
@@ -87,8 +87,8 @@ The largest file. A list of **team member** objects, rendered on `team.html`. Se
 | `joined` | string | `MM/YYYY` or `YYYY`. Optional. Stored for reference — **not displayed** on the site. |
 | `photo` | image path | `assets/mem/<id>.jpg` (see [Assets](#assets-assets) for photo guidelines). Leave empty for the placeholder avatar. |
 | `topic` | select | Must match one of the IDs in `data/questions.json`. Shown as a button on the card that links to that question on the Research page. |
-| `scholar` | URL | Google Scholar profile. Also used on the Resources page to list publications. |
-| `orcid` | URL | ORCID profile URL. Shows a green "iD" badge next to the name, and is also used on the Resources page. |
+| `scholar` | URL | Google Scholar profile. For `arko-ghosh` only, it is also shown in the Publications section of the Resources page. |
+| `orcid` | URL | ORCID profile URL. Shows a green "iD" badge next to the name. For `arko-ghosh` only, it is also shown in the Publications section of the Resources page. |
 | `sample` | boolean | `true` = this member's timeline is still example/placeholder content. Set to `false` once real content is filled in. |
 | `timeline` | list of objects | The member's timeline, always visible on their card. **Sorted automatically** by `time`, oldest → newest; points without a time go last. |
 
@@ -194,7 +194,7 @@ Page-level content for `partners.html`: `title` + `highlight` (the page title), 
 
 ### `data/resources.json`
 List of **patents, datasets, and code repositories**, shown on `resources.html`.  
-Note: *publications are not listed here* — the Publications section is built automatically from team members' Google Scholar / ORCID links.
+Note: *publications are not listed here* — the Publications section shows only Arko Ghosh's Google Scholar and ORCID links, taken from his entry in `data/team.json`. The member is chosen by `PUBLICATIONS_ID` in the script of `resources.html`; change that ID to show someone else.
 
 | Field | Notes |
 |---|---|

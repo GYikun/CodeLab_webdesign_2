@@ -423,7 +423,7 @@ content:
         label: Type
         type: select
         required: true
-        description: "Publications are not listed here: they come from the Google Scholar / ORCID links of team members."
+        description: "Publications are not listed here: they come from Arko Ghosh's Google Scholar / ORCID links under Team."
         options:
           values:
             - name: patent
@@ -516,14 +516,14 @@ content:
       - name: scholar
         label: Google Scholar link
         type: string
-        description: "Also used for the Publications section of the Resources page."
+        description: "For Arko Ghosh, also shown in the Publications section of the Resources page."
         pattern:
           regex: "^(https://\\S+)?$"
           message: "Must be a full link starting with https://"
       - name: orcid
         label: ORCID link
         type: string
-        description: "e.g. https://orcid.org/0000-0000-0000-0000. Also used on the Resources page."
+        description: "e.g. https://orcid.org/0000-0000-0000-0000. Shown as an iD badge on the Team page; for Arko Ghosh also in the Publications section of the Resources page."
         pattern:
           regex: "^(https://\\S+)?$"
           message: "Must be a full link starting with https://"
