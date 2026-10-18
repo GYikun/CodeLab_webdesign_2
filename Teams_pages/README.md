@@ -24,7 +24,7 @@ css/styles.css ← all styles, single file
 | File | URL slug | What it shows |
 |---|---|---|
 | `index.html` | `/` | Hero section + milestone timeline |
-| `discoveries.html` | `/discoveries` | Papers/publications + video |
+| `discoveries.html` | `/discoveries` | Papers/publications + media coverage (In the news) + video |
 | `research.html` | `/research` | Research questions (FAQ style) |
 | `partners.html` | `/partners` | Research partners, funders, spin-offs |
 | `team.html` | `/team` | Team member cards + personal timelines |
@@ -131,6 +131,18 @@ Controls the **video** shown on `discoveries.html`.
 |---|---|
 | `src` | path under `assets/video/`. MP4 (H.264) recommended. Max ~50 MB (GitHub rejects >100 MB). Leave empty to hide. |
 | `poster` | optional cover image shown before play (or as placeholder if no video). Path under `assets/pub/`. |
+
+---
+
+### `data/news.json`
+List of **media coverage**, shown in the "In the news" block on `discoveries.html` (between the papers and the video, collapsed behind a "Show coverage" button). Shown in file order, so keep the newest first. The block is hidden while the list is empty.
+
+| Field | Notes |
+|---|---|
+| `outlet` | plain string — e.g. `The Guardian` |
+| `title` | plain string — the headline, in its original language |
+| `year` | number |
+| `url` | required, full `https://` link |
 
 ---
 
@@ -242,6 +254,7 @@ Pages CMS commits directly to `main` when editors save changes through the CMS U
 | Research questions | `data/questions.json` (+ sync `topic` options in `.pages.yml` if adding/removing) |
 | Papers / publications | `data/discoveries.json` |
 | Video on discoveries page | `data/video.json` |
+| Media coverage (In the news) | `data/news.json` |
 | Partners | `data/partners.json` |
 | Patents / datasets / code | `data/resources.json` |
 | Team members | `data/team.json` |

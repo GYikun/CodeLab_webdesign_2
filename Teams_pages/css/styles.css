@@ -805,8 +805,9 @@ a.pt-tile:hover { border-color: var(--blue); transform: translateY(-2px) }
 }
 
 /* ==========================================================
-   News section — Resources page
+   News section — Discoveries page (between the papers and the video)
    ========================================================== */
+.disc-news { margin-top: clamp(56px, 6vw, 80px) }
 .news-details { margin-top: 0 }
 .news-details[open] .news-summary { margin-bottom: 16px }
 .news-summary {

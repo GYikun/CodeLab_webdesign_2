@@ -69,7 +69,7 @@
         orcid: p.orcid || '',
         roleKey: roleKey,
         photo: p.photo || '',
-        href: q ? 'questions.html#' + q.id : '',
+        href: q ? 'research.html#' + q.id : '',
         linkKey: linkKey,
         events: points.map(function (ev) {
           var isKey = !!D.text(ev.detail, 'en');

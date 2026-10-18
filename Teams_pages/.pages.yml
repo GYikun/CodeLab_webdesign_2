@@ -384,7 +384,7 @@ content:
             component: i18n-text-optional
 
   - name: news
-    label: In the news
+    label: In the news (Discoveries)
     type: file
     path: data/news.json
     format: json

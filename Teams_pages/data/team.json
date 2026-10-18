@@ -7,156 +7,186 @@
       "nl": "Universitair docent · Hoofdonderzoeker"
     },
     "status": "current",
-    "joined": "",
-    "photo": "",
+    "joined": "09/2017",
+    "photo": "assets/mem/arko-ghosh.png",
     "topic": "brain-behaviour",
     "scholar": "https://scholar.google.com/citations?hl=en&user=W8koQUgAAAAJ&view_op=list_works&sortby=pubdate",
     "orcid": "https://orcid.org/0000-0002-2924-5146",
     "sample": false,
     "timeline": [
       {
+        "time": "2000",
+        "text": {
+          "en": "Cellular biophysics",
+          "nl": "Cellulaire biofysica"
+        },
+        "detailTitle": {
+          "en": "How cancer cells undergo death",
+          "nl": "Hoe kankercellen afsterven"
+        },
+        "detail": {
+          "en": "My first research paper based on the work I initiated as a first year undergraduate student. I returned to the University of Rochester through my college years each summer to work with the wonderful Philip Knauf.",
+          "nl": "Mijn eerste wetenschappelijke artikel, gebaseerd op werk waarmee ik als eerstejaars bachelorstudent begon. Tijdens mijn studiejaren keerde ik elke zomer terug naar de University of Rochester om te werken met de geweldige Philip Knauf."
+        }
+      },
+      {
+        "time": "2003",
+        "text": {
+          "en": "Temporal lobe epilepsy",
+          "nl": "Temporaalkwabepilepsie"
+        },
+        "detailTitle": {
+          "en": "From the chapel to an epilepsy lab at Yale",
+          "nl": "Van de kapel naar een epilepsielab op Yale"
+        },
+        "detail": {
+          "en": "As a final year BSc student I helped develop a new animal model of temporal lobe epilepsy. This work was published in the journal BRAIN. This work began when I met a pastor at the Trinity College (CT) chapel who was also a professor of neurosurgery at Yale - and he invited me to join his lab.",
+          "nl": "Als laatstejaars bachelorstudent hielp ik een nieuw diermodel voor temporaalkwabepilepsie te ontwikkelen. Dit werk werd gepubliceerd in het tijdschrift BRAIN. Het begon toen ik in de kapel van Trinity College (CT) een predikant ontmoette die ook hoogleraar neurochirurgie aan Yale was - en hij nodigde me uit om in zijn lab te komen werken."
+        }
+      },
+      {
+        "time": "2004",
+        "text": {
+          "en": "ETH Zurich PhD research. Systems neuroscience.",
+          "nl": "Promotieonderzoek aan de ETH Zürich. Systeemneurowetenschap."
+        },
+        "detailTitle": {
+          "en": "Cortical perspective of spinal cord injury",
+          "nl": "Een corticaal perspectief op dwarslaesie"
+        },
+        "detail": {
+          "en": "I was introduced to the world of systems and molecular neuroscience by Martin Schwab. During my PhD I discovered how neurons in the brain re-wire after spinal cord injury. This work involved bringing together a range of methods: from microscopy to resolve single neurons to imaging brain activity to genetics. I was surprised when I got an ETH Medal for this work.",
+          "nl": "Martin Schwab liet me kennismaken met de wereld van de systeem- en moleculaire neurowetenschap. Tijdens mijn promotieonderzoek ontdekte ik hoe neuronen in het brein zich na een dwarslaesie opnieuw verbinden. Daarvoor bracht ik uiteenlopende methoden samen: van microscopie om afzonderlijke neuronen in beeld te brengen tot het meten van hersenactiviteit en genetica. Ik was verrast toen ik voor dit werk een ETH-medaille kreeg."
+        }
+      },
+      {
+        "time": "2010",
+        "text": {
+          "en": "A five-year period to settle on the science",
+          "nl": "Vijf jaar om de wetenschappelijke koers te bepalen"
+        },
+        "detailTitle": {
+          "en": "Branco Weiss Fellowship",
+          "nl": "Branco Weiss Fellowship"
+        },
+        "detail": {
+          "en": "Thanks to Branco Weiss's generous gift, I was given the freedom to develop a new research program focused on brain body interactions. During this period I explored action control with Patrick Haggard at UCL and spent my time in Kevan Martin's environment to develop my ideas on the nature of thoughtful science.",
+          "nl": "Dankzij de genereuze gift van Branco Weiss kreeg ik de vrijheid om een nieuw onderzoeksprogramma op te zetten rond de interactie tussen brein en lichaam. In deze periode verkende ik actiecontrole met Patrick Haggard aan UCL en werkte ik in de omgeving van Kevan Martin aan mijn ideeën over de aard van doordachte wetenschap."
+        }
+      },
+      {
         "time": "2014",
         "text": {
-          "en": "WIRED covers the smartphone-shaped brain",
-          "nl": "WIRED bericht over het door smartphones gevormde brein"
+          "en": "Brain activity in smartphone users",
+          "nl": "Hersenactiviteit bij smartphonegebruikers"
         },
         "detailTitle": {
-          "en": "The smartphone-shaped brain reaches the public",
-          "nl": "Het door smartphones gevormde brein bereikt het publiek"
+          "en": "Brain plasticity and smartphones",
+          "nl": "Hersenplasticiteit en smartphones"
         },
         "detail": {
-          "en": "Early work showing that everyday touchscreen use leaves a measurable imprint on the sensory cortex. WIRED’s coverage brought the idea out of the lab and started the conversation this group has been having ever since.",
-          "nl": "Vroeg werk dat liet zien dat alledaags touchscreengebruik een meetbare afdruk achterlaat in de sensorische cortex. De berichtgeving van WIRED haalde het idee uit het lab en startte het gesprek dat deze groep sindsdien voert."
+          "en": "I wanted to address if the information from the thumb was differently processed in smartphone users vs. push button phone users. Eric Rouiller and Anne-Dominique Gindrat in Uni Fribourg helped me set up a unique study to link smartphone behavior and brain activity.",
+          "nl": "Ik wilde nagaan of informatie van de duim anders wordt verwerkt bij smartphonegebruikers dan bij gebruikers van telefoons met drukknoppen. Eric Rouiller en Anne-Dominique Gindrat van de Universiteit van Fribourg hielpen me een unieke studie op te zetten die smartphonegedrag aan hersenactiviteit koppelt."
         }
       },
       {
-        "time": "2016",
+        "time": "2017",
         "text": {
-          "en": "QuantActions AG founded",
-          "nl": "QuantActions AG opgericht"
+          "en": "A new research program at Leiden University",
+          "nl": "Een nieuw onderzoeksprogramma aan de Universiteit Leiden"
         },
         "detailTitle": {
-          "en": "First spin-off",
-          "nl": "Eerste spin-off"
+          "en": "CODELAB",
+          "nl": "CODELAB"
         },
         "detail": {
-          "en": "The first attempt to turn smartphone interaction data into a usable digital biomarker outside an academic setting.",
-          "nl": "De eerste poging om smartphone-interactiedata om te zetten in een bruikbare digitale biomarker buiten een academische omgeving."
-        }
-      },
-      {
-        "time": "2019",
-        "text": {
-          "en": "Sleep-wake cycles read from taps",
-          "nl": "Slaap-waakcycli afgelezen uit tikken"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "2021",
-        "text": {
-          "en": "The Guardian names the field “tappigraphy”",
-          "nl": "The Guardian noemt het veld “tappigraphy”"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "2023",
-        "text": {
-          "en": "Multi-day rhythms found in phone use",
-          "nl": "Meerdaagse ritmes ontdekt in telefoongebruik"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "2024",
-        "text": {
-          "en": "AXITE BV founded",
-          "nl": "AXITE BV opgericht"
-        },
-        "detailTitle": {
-          "en": "From discovery to the clinic",
-          "nl": "Van ontdekking naar de kliniek"
-        },
-        "detail": {
-          "en": "A second spin-off, this time aimed squarely at clinical brain-health monitoring rather than general-purpose biomarkers.",
-          "nl": "Een tweede spin-off, ditmaal specifiek gericht op klinische monitoring van hersengezondheid in plaats van algemene biomarkers."
+          "en": "Smartphone use is ubiquitous. We do not understand how we use it and how the brain is engaged for it. We set up Cognition in the Digital Environment Laboratory to address the fundamental questions underlying modern human activities involving the digital space.",
+          "nl": "Smartphonegebruik is overal. We begrijpen niet hoe we de smartphone gebruiken en hoe het brein daarbij betrokken is. We richtten het Cognition in the Digital Environment Laboratory op om de fundamentele vragen achter moderne menselijke activiteiten in de digitale ruimte te onderzoeken."
         }
       }
     ],
     "tag": "Principal Investigator"
   },
   {
-    "id": "guido-band",
-    "name": "Guido Band",
+    "id": "wenyu-wan",
+    "name": "Wenyu Wan",
     "role": {
-      "en": "Associate Professor · Teaching-focused mentor",
-      "nl": "Universitair hoofddocent · Onderwijsgerichte mentor"
+      "en": "Postdoctoral Researcher",
+      "nl": "Postdoctoraal onderzoeker"
     },
     "status": "current",
-    "joined": "",
-    "photo": "",
+    "joined": "02/2021",
+    "photo": "assets/mem/wenyu-wan.jpg",
     "topic": "brain-behaviour",
-    "scholar": "",
+    "scholar": "https://scholar.google.com/citations?user=9TwWRMMAAAAJ&hl=zh-CN",
     "orcid": "",
-    "sample": true,
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2021",
         "text": {
-          "en": "Cognitive control and error monitoring",
-          "nl": "Cognitieve controle en foutmonitoring"
+          "en": "Start PhD at CodeLab",
+          "nl": "Start promotieonderzoek bij CodeLab"
         },
         "detailTitle": {
           "en": "",
           "nl": ""
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "My research pairs smartphone usage data with EEG recordings to uncover the underlying neural processes driving the temporal patterns of everyday smartphone behavior.",
+          "nl": "Mijn onderzoek combineert smartphonegebruiksdata met EEG-metingen om de onderliggende neurale processen bloot te leggen die de tijdspatronen van alledaags smartphonegedrag aansturen."
         }
       },
       {
-        "time": "",
+        "time": "2024",
         "text": {
-          "en": "Joins CODELAB as teaching-focused mentor",
-          "nl": "Sluit zich aan bij CODELAB als onderwijsgerichte mentor"
+          "en": "Multiscale Tactile Integration",
+          "nl": "Tactiele integratie over meerdere tijdschalen"
         },
         "detailTitle": {
-          "en": "Why a second mentor",
-          "nl": "Waarom een tweede mentor"
+          "en": "Cortical integration of tactile inputs distributed across timescales",
+          "nl": "Corticale integratie van tactiele input verspreid over tijdschalen"
         },
         "detail": {
-          "en": "The group runs two senior mentors side by side — one for research, one for teaching — so that a first-year student and a postdoc can both find a way in.",
-          "nl": "De groep werkt met twee senior mentoren naast elkaar — één voor onderzoek, één voor onderwijs — zodat zowel een eerstejaars als een postdoc een ingang vindt."
+          "en": "I developed the Joint-Interval ERP (JIERP) approach to investigate how the brain integrates multi-timescale temporal dynamics during tactile processing.",
+          "nl": "Ik ontwikkelde de Joint-Interval ERP-methode (JIERP) om te onderzoeken hoe het brein temporele dynamiek op meerdere tijdschalen integreert tijdens tactiele verwerking."
         }
       },
       {
-        "time": "",
+        "time": "2025",
         "text": {
-          "en": "Supervises first tappigraphy theses",
-          "nl": "Begeleidt eerste tappigraphy-scripties"
+          "en": "Cortical Inhibition in Smartphone Use",
+          "nl": "Corticale inhibitie bij smartphonegebruik"
+        },
+        "detailTitle": {
+          "en": "Bursts of regional cortical inhibition during smartphone use",
+          "nl": "Uitbarstingen van regionale corticale inhibitie tijdens smartphonegebruik"
+        },
+        "detail": {
+          "en": "I investigated how beta bursts—a specific transient neural feature—modulate the behavioral timing of smartphone interactions.",
+          "nl": "Ik onderzocht hoe bètabursts—een specifiek kortstondig neuraal kenmerk—de timing van smartphone-interacties beïnvloeden."
+        }
+      },
+      {
+        "time": "2025",
+        "text": {
+          "en": "Behavioral maps in brain",
+          "nl": "Gedragskaarten in het brein"
+        },
+        "detailTitle": {
+          "en": "Behavioral maps organize smartphone interactions in the brain",
+          "nl": "Gedragskaarten ordenen smartphone-interacties in het brein"
+        },
+        "detail": {
+          "en": "I demonstrated that neural encoding of smartphone behavioral timing is low-dimensional, where identical temporal dynamics recruit shared cortical response patterns.",
+          "nl": "Ik toonde aan dat de neurale codering van de timing van smartphonegedrag laagdimensionaal is: identieke temporele dynamiek roept gedeelde corticale responspatronen op."
+        }
+      },
+      {
+        "time": "2025",
+        "text": {
+          "en": "Postdoc/visiting researcher at CodeLab",
+          "nl": "Postdoc/gastonderzoeker bij CodeLab"
         },
         "detailTitle": {
           "en": "",
@@ -178,323 +208,149 @@
       "nl": "Promovendus"
     },
     "status": "current",
-    "joined": "",
-    "photo": "",
-    "topic": "brain-disorders",
-    "scholar": "",
-    "orcid": "",
-    "sample": true,
+    "joined": "12/2025",
+    "photo": "assets/mem/khrystyna-semkiv.jpg",
+    "topic": "patterns-over-time",
+    "scholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&user=0ZgkAPYAAAAJ",
+    "orcid": "https://orcid.org/0000-0003-4894-1793",
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2015",
         "text": {
-          "en": "MSc in cognitive neuroscience",
-          "nl": "MSc in cognitieve neurowetenschap"
+          "en": "Everything starts with a dream.",
+          "nl": "Alles begint met een droom."
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "My dream",
+          "nl": "Mijn droom"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "Ever since, I have wanted to bring good to people and inspire future generations to do great things, so everyone can live the life they wish.",
+          "nl": "Sindsdien wil ik mensen iets goeds brengen en toekomstige generaties inspireren om grote dingen te doen, zodat iedereen het leven kan leiden dat hij of zij wil."
         }
       },
       {
-        "time": "",
+        "time": "2020",
         "text": {
-          "en": "Ballet years — measuring her own knee-jerk reflex",
-          "nl": "Balletjaren — haar eigen kniepeesreflex meten"
+          "en": "Detecting respiratory pathologies using machine learning",
+          "nl": "Ademhalingsaandoeningen opsporen met machine learning"
         },
         "detailTitle": {
-          "en": "Where the interest actually started",
-          "nl": "Waar de interesse werkelijk begon"
+          "en": "First research experience",
+          "nl": "Eerste onderzoekservaring"
         },
         "detail": {
-          "en": "Years of ballet training, and a stubborn curiosity about why the same reflex test gave different answers before and after rehearsal. Not a publication — but the reason the rest of this timeline exists.",
-          "nl": "Jarenlange balletopleiding, en een hardnekkige nieuwsgierigheid naar waarom dezelfde reflextest vóór en ná de repetitie andere antwoorden gaf. Geen publicatie — maar wel de reden dat de rest van deze tijdlijn bestaat."
+          "en": "I developed an algorithm to detect respiratory pathologies and co-authored the resulting manuscript, which sparked my passion for research.",
+          "nl": "Ik ontwikkelde een algoritme om ademhalingsaandoeningen op te sporen en was medeauteur van het manuscript dat daaruit voortkwam. Dat wekte mijn passie voor onderzoek."
         }
       },
       {
-        "time": "",
+        "time": "2022",
         "text": {
-          "en": "Starts PhD at CODELAB",
-          "nl": "Start promotieonderzoek bij CODELAB"
+          "en": "Discovering new research cultures",
+          "nl": "Nieuwe onderzoeksculturen ontdekken"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Moving abroad",
+          "nl": "Naar het buitenland"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "Moving abroad took me beyond the world I grew up in, bringing new opportunities and experiences, including a chance to learn from diverse research cultures.",
+          "nl": "Door naar het buitenland te verhuizen kwam ik voorbij de wereld waarin ik opgroeide. Dat bracht nieuwe kansen en ervaringen, waaronder de kans om te leren van uiteenlopende onderzoeksculturen."
         }
       },
       {
-        "time": "",
+        "time": "2022",
         "text": {
-          "en": "First clinical data collection",
-          "nl": "Eerste klinische dataverzameling"
+          "en": "Brain and sleep disorders research",
+          "nl": "Onderzoek naar hersen- en slaapstoornissen"
         },
         "detailTitle": {
-          "en": "Working inside the clinic",
-          "nl": "Werken binnen de kliniek"
+          "en": "Research Assistant Journey",
+          "nl": "Mijn tijd als onderzoeksassistent"
         },
         "detail": {
-          "en": "Collecting touchscreen data alongside clinical recordings means fitting research around care, not the other way round — the slowest and most instructive part of the project so far.",
-          "nl": "Touchscreendata verzamelen naast klinische metingen betekent onderzoek inpassen rond de zorg, niet andersom — tot nu toe het traagste en leerzaamste deel van het project."
+          "en": "I studied brain and sleep disorders, took part in international conferences, published in a peer-reviewed journal and built an international research network that strengthened my passion and motivated me to pursue a PhD.",
+          "nl": "Ik bestudeerde hersen- en slaapstoornissen, nam deel aan internationale congressen, publiceerde in een peer-reviewed tijdschrift en bouwde een internationaal onderzoeksnetwerk op. Dat versterkte mijn passie en motiveerde me om te gaan promoveren."
         }
       },
       {
-        "time": "",
+        "time": "2025",
         "text": {
-          "en": "Thesis in progress",
-          "nl": "Proefschrift in wording"
+          "en": "Smartphone behavior in disease and under stress",
+          "nl": "Smartphonegedrag bij ziekte en onder stress"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "PhD Journey",
+          "nl": "Mijn promotietraject"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "I study human behavior dynamics through smartphone interaction data, focusing on how behavioral patterns evolve over time, how they change in disease, and how daily stress shapes their trajectory.",
+          "nl": "Ik bestudeer de dynamiek van menselijk gedrag aan de hand van smartphone-interactiedata: hoe gedragspatronen zich in de loop van de tijd ontwikkelen, hoe ze veranderen bij ziekte en hoe dagelijkse stress hun verloop vormt."
         }
       }
     ],
     "tag": "Researcher"
   },
   {
-    "id": "wenyu-wan",
-    "name": "Wenyu Wan",
+    "id": "celia-peralta-schutte",
+    "name": "Celia Peralta Schutte",
     "role": {
-      "en": "Guest researcher",
-      "nl": "Gastonderzoeker"
+      "en": "Researcher",
+      "nl": "Onderzoeker"
     },
     "status": "current",
-    "joined": "",
-    "photo": "",
-    "topic": "lifetime",
-    "scholar": "",
-    "orcid": "",
-    "sample": true,
-    "timeline": [
-      {
-        "time": "",
-        "text": {
-          "en": "Background in ageing research",
-          "nl": "Achtergrond in ouderdomsonderzoek"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Joins CODELAB as guest researcher",
-          "nl": "Sluit zich aan bij CODELAB als gastonderzoeker"
-        },
-        "detailTitle": {
-          "en": "A visiting perspective",
-          "nl": "Een blik van buiten"
-        },
-        "detail": {
-          "en": "Guest researchers bring methods the group does not already own. Placeholder text — replace with the visit’s actual focus.",
-          "nl": "Gastonderzoekers brengen methoden mee die de groep nog niet in huis heeft. Plaatsaanduiding — vervang door de werkelijke focus van het bezoek."
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Behavioural-age modelling",
-          "nl": "Modellering van gedragsleeftijd"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      }
-    ],
-    "tag": "Visiting Researcher"
-  },
-  {
-    "id": "ruchella-kock",
-    "name": "Ruchella Kock",
-    "role": {
-      "en": "Guest researcher",
-      "nl": "Gastonderzoeker"
-    },
-    "status": "current",
-    "joined": "",
-    "photo": "",
+    "joined": "03/2026",
+    "photo": "assets/mem/celia-peralta-schutte.jpg",
     "topic": "patterns-over-time",
     "scholar": "",
     "orcid": "",
-    "sample": true,
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2025",
         "text": {
-          "en": "Time-series methods",
-          "nl": "Tijdreeksmethoden"
+          "en": "Pre-University research project",
+          "nl": "Pre-University-onderzoeksproject"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Generalizable behavioral structures of a popular dating app",
+          "nl": "Generaliseerbare gedragsstructuren in een populaire datingapp"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "I examined whether the timing of smartphone touchscreen interactions shows similarities in structure across different behavioural contexts. To do this, I analysed inter-touch intervals from both Tinder-specific and general smartphone use.",
+          "nl": "Ik onderzocht of de timing van touchscreeninteracties op de smartphone overeenkomsten in structuur vertoont tussen verschillende gedragscontexten. Daarvoor analyseerde ik de intervallen tussen aanrakingen, zowel bij Tinder-gebruik als bij algemeen smartphonegebruik."
         }
       },
       {
-        "time": "",
+        "time": "2026",
         "text": {
-          "en": "Hidden rhythms in everyday behaviour",
-          "nl": "Verborgen ritmes in alledaags gedrag"
+          "en": "Study of dating app structure",
+          "nl": "Studie naar de structuur van datingapps"
         },
         "detailTitle": {
-          "en": "Looking past the 24-hour day",
-          "nl": "Voorbij de 24-uursdag kijken"
+          "en": "Temporal dynamics of dating app interactions",
+          "nl": "Temporele dynamiek van interacties in datingapps"
         },
         "detail": {
-          "en": "Most behavioural work stops at the daily cycle. Placeholder text — replace with a short account of the multi-day rhythm work.",
-          "nl": "Het meeste gedragsonderzoek stopt bij de dagelijkse cyclus. Plaatsaanduiding — vervang door een korte beschrijving van het meerdaagse-ritmeonderzoek."
+          "en": "I study how the temporal structure of dating app use changes over time by comparing patterns of interaction between early and later stages of use.",
+          "nl": "Ik bestudeer hoe de temporele structuur van datingappgebruik in de loop van de tijd verandert, door interactiepatronen in vroege en latere fasen van gebruik te vergelijken."
         }
       },
       {
-        "time": "",
+        "time": "2026",
         "text": {
-          "en": "Guest researcher at CODELAB",
-          "nl": "Gastonderzoeker bij CODELAB"
+          "en": "Many species JID study",
+          "nl": "JID-studie bij vele soorten"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Cross-species behavior dynamics using JID",
+          "nl": "Gedragsdynamiek over soorten heen met JID"
         },
         "detail": {
-          "en": "",
-          "nl": ""
-        }
-      }
-    ],
-    "tag": "Visiting Researcher"
-  },
-  {
-    "id": "fleur-van-der-laan",
-    "name": "Fleur van der Laan",
-    "role": {
-      "en": "Education and Research Assistant",
-      "nl": "Onderwijs- en onderzoeksassistent"
-    },
-    "status": "current",
-    "joined": "",
-    "photo": "",
-    "topic": "",
-    "scholar": "",
-    "orcid": "",
-    "sample": true,
-    "timeline": [
-      {
-        "time": "",
-        "text": {
-          "en": "BSc psychology, Leiden",
-          "nl": "BSc psychologie, Leiden"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Runs participant recruitment",
-          "nl": "Verzorgt de werving van deelnemers"
-        },
-        "detailTitle": {
-          "en": "The people behind the data",
-          "nl": "De mensen achter de data"
-        },
-        "detail": {
-          "en": "Every tap in the dataset belongs to someone who agreed to share it. Placeholder text — replace with a note on how recruitment and consent actually run.",
-          "nl": "Elke tik in de dataset is van iemand die ermee instemde die te delen. Plaatsaanduiding — vervang door een notitie over hoe werving en toestemming werkelijk verlopen."
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Education and research assistant",
-          "nl": "Onderwijs- en onderzoeksassistent"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      }
-    ],
-    "tag": "Researcher"
-  },
-  {
-    "id": "sezin-mumcu",
-    "name": "Sezin Mumcu",
-    "role": {
-      "en": "Team member",
-      "nl": "Teamlid"
-    },
-    "status": "current",
-    "joined": "",
-    "photo": "",
-    "topic": "patterns-over-time",
-    "scholar": "",
-    "orcid": "",
-    "sample": true,
-    "timeline": [
-      {
-        "time": "",
-        "text": {
-          "en": "Joins the group",
-          "nl": "Sluit zich aan bij de groep"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Sleep and wearable data",
-          "nl": "Slaap- en wearabledata"
-        },
-        "detailTitle": {
-          "en": "Two instruments, one night",
-          "nl": "Twee instrumenten, één nacht"
-        },
-        "detail": {
-          "en": "Placeholder text — replace with a short account of combining wearables with touchscreen activity.",
-          "nl": "Plaatsaanduiding — vervang door een korte beschrijving van het combineren van wearables met touchscreenactiviteit."
+          "en": "I examine long-term behaviour of different species to identify shared behavioural constraints. By analysing and comparing interval dynamics, I test if biological behaviour follows generalizable timing structures.",
+          "nl": "Ik onderzoek het langetermijngedrag van verschillende soorten om gedeelde gedragsbeperkingen te vinden. Door intervaldynamiek te analyseren en te vergelijken, test ik of biologisch gedrag generaliseerbare timingstructuren volgt."
         }
       }
     ],
@@ -504,186 +360,303 @@
     "id": "david-hof",
     "name": "David Hof",
     "role": {
-      "en": "MSc thesis student",
-      "nl": "Masterstudent (scriptie)"
+      "en": "Visiting Researcher",
+      "nl": "Gastonderzoeker"
     },
     "status": "current",
-    "joined": "",
-    "photo": "",
-    "topic": "patterns-over-time",
+    "joined": "02/2024",
+    "photo": "assets/mem/david-hof.jpg",
+    "topic": "brain-behaviour",
     "scholar": "",
-    "orcid": "",
-    "sample": true,
+    "orcid": "https://orcid.org/0009-0003-0376-6183",
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2024",
         "text": {
-          "en": "BSc psychology",
-          "nl": "BSc psychologie"
+          "en": "EEG/tappigraphy study",
+          "nl": "EEG/tappigraphy-studie"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Smartphone Behavior Is Suppressed During Bursts of Wake Slow Waves",
+          "nl": "Smartphonegedrag wordt onderdrukt tijdens uitbarstingen van trage golven in waaktoestand"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "Investigated brain-behavior associations; conducted an extensive literature review, created a processing pipeline for EEG data, analyzed EEG & smartphone touchscreen data using multivariate statistics.",
+          "nl": "Onderzocht verbanden tussen brein en gedrag; voerde een uitgebreid literatuuronderzoek uit, bouwde een verwerkingspijplijn voor EEG-data en analyseerde EEG- en smartphonetouchscreendata met multivariate statistiek."
         }
       },
       {
-        "time": "",
+        "time": "2025",
         "text": {
-          "en": "MSc thesis: rhythms in phone use",
-          "nl": "MSc-scriptie: ritmes in telefoongebruik"
+          "en": "EEG/tappigraphy study, master thesis project",
+          "nl": "EEG/tappigraphy-studie, masterscriptieproject"
         },
         "detailTitle": {
-          "en": "The thesis question",
-          "nl": "De scriptievraag"
+          "en": "Spatiotemporal Patterns of Sleep-Like Slow Waves Reflect Smartphone Behavior",
+          "nl": "Ruimtelijk-temporele patronen van slaapachtige trage golven weerspiegelen smartphonegedrag"
         },
         "detail": {
-          "en": "Placeholder text — replace with one or two sentences on what the thesis is actually asking.",
-          "nl": "Plaatsaanduiding — vervang door een of twee zinnen over wat de scriptie werkelijk onderzoekt."
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Defence expected",
-          "nl": "Verdediging verwacht"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
+          "en": "Investigated brain-behavior associations by analyzing EEG & smartphone touchscreen data using multivariate statistics and artificial neural networks.",
+          "nl": "Onderzocht verbanden tussen brein en gedrag door EEG- en smartphonetouchscreendata te analyseren met multivariate statistiek en kunstmatige neurale netwerken."
         }
       }
     ],
-    "tag": "MSc Student"
+    "tag": "Visiting Researcher"
   },
   {
-    "id": "oyku-gurcan",
-    "name": "Öykü Gürcan",
+    "id": "arthur-van-nieuw-amerongen",
+    "name": "Arthur R van Nieuw Amerongen",
     "role": {
-      "en": "MSc thesis student",
-      "nl": "Masterstudent (scriptie)"
+      "en": "Visiting Researcher",
+      "nl": "Gastonderzoeker"
+    },
+    "status": "current",
+    "joined": "01/2023",
+    "photo": "assets/mem/arthur-van-nieuw-amerongen.jpg",
+    "topic": "brain-disorders",
+    "scholar": "https://scholar.google.com/citations?user=s2sajDEAAAAJ&hl=en&oi=ao",
+    "orcid": "https://orcid.org/0000-0001-8375-5975",
+    "sample": false,
+    "timeline": [
+      {
+        "time": "2023",
+        "text": {
+          "en": "Epilepsy case study",
+          "nl": "Casusstudie epilepsie"
+        },
+        "detailTitle": {
+          "en": "Tracing the behavioural impact of seizures and medication in epilepsy",
+          "nl": "De gedragsimpact van aanvallen en medicatie bij epilepsie in kaart brengen"
+        },
+        "detail": {
+          "en": "I analyzed how a seizure and the withdrawal of anti-seizure medication impacted the smartphone behaviour of an individual with epilepsy.",
+          "nl": "Ik analyseerde hoe een aanval en het afbouwen van anti-epileptica het smartphonegedrag van een persoon met epilepsie beïnvloedden."
+        }
+      },
+      {
+        "time": "2024",
+        "text": {
+          "en": "Sleep study",
+          "nl": "Slaapstudie"
+        },
+        "detailTitle": {
+          "en": "Characterizing long-term sleep patterns in people with epilepsy",
+          "nl": "Langetermijnslaappatronen bij mensen met epilepsie in kaart brengen"
+        },
+        "detail": {
+          "en": "I characterized the behavioural sleep-wake patterns of 67 people with epilepsy and compared them to those of healthy controls.",
+          "nl": "Ik bracht de gedragsmatige slaap-waakpatronen van 67 mensen met epilepsie in kaart en vergeleek ze met die van gezonde controlepersonen."
+        }
+      },
+      {
+        "time": "2026",
+        "text": {
+          "en": "Epilepsy cohort study",
+          "nl": "Cohortstudie epilepsie"
+        },
+        "detailTitle": {
+          "en": "Tracing the behavioural impact of seizures and medication in an epilepsy cohort",
+          "nl": "De gedragsimpact van aanvallen en medicatie in een epilepsiecohort in kaart brengen"
+        },
+        "detail": {
+          "en": "I investigate whether seizures and anti-seizure medication have an impact on daily behaviour in a group of 100 people with epilepsy.",
+          "nl": "Ik onderzoek of aanvallen en anti-epileptica invloed hebben op het dagelijks gedrag van een groep van 100 mensen met epilepsie."
+        }
+      }
+    ],
+    "tag": "Visiting Researcher"
+  },
+  {
+    "id": "fleur-van-der-laan",
+    "name": "Fleur van der Laan",
+    "role": {
+      "en": "Research Assistant",
+      "nl": "Onderzoeksassistent"
     },
     "status": "current",
     "joined": "",
-    "photo": "",
+    "photo": "assets/mem/fleur-van-der-laan.png",
     "topic": "brain-disorders",
     "scholar": "",
     "orcid": "",
-    "sample": true,
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2026",
         "text": {
-          "en": "BSc psychology",
-          "nl": "BSc psychologie"
+          "en": "Longitudinal digital habit-tracking",
+          "nl": "Longitudinaal digitaal gewoontes volgen"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Research Intern",
+          "nl": "Onderzoeksstagiair"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "I helped design and run a longitudinal digital habit-tracking study, collecting data and analysing whether subclinical OCD symptom profiles moderate how daily stress and context stability predict next-day habit automaticity.",
+          "nl": "Ik hielp bij het opzetten en uitvoeren van een longitudinale studie waarin gewoontes digitaal werden gevolgd. Ik verzamelde data en analyseerde of subklinische OCS-symptoomprofielen modereren hoe dagelijkse stress en stabiliteit van de context de automatische gewoontevorming van de volgende dag voorspellen."
         }
       },
       {
-        "time": "",
+        "time": "2026",
         "text": {
-          "en": "MSc thesis: touch data and disease markers",
-          "nl": "MSc-scriptie: aanraakdata en ziektemarkers"
+          "en": "Replication study",
+          "nl": "Replicatiestudie"
         },
         "detailTitle": {
-          "en": "The thesis question",
-          "nl": "De scriptievraag"
+          "en": "Research/Clinical Intern",
+          "nl": "Onderzoeks-/klinisch stagiair"
         },
         "detail": {
-          "en": "Placeholder text — replace with one or two sentences on what the thesis is actually asking.",
-          "nl": "Plaatsaanduiding — vervang door een of twee zinnen over wat de scriptie werkelijk onderzoekt."
+          "en": "Besides neuropsychological testing, I will apply supervised machine learning to a frontotemporal dementia (FTD) cohort including primary progressive aphasia (PPA) variants, in an attempt to replicate prior subtype classification methods in a Dutch-speaking population.",
+          "nl": "Naast neuropsychologisch onderzoek ga ik supervised machine learning toepassen op een cohort met frontotemporale dementie (FTD), inclusief varianten van primair progressieve afasie (PPA), om eerdere methoden voor subtypeclassificatie te repliceren in een Nederlandstalige populatie."
+        }
+      }
+    ],
+    "tag": "Researcher"
+  },
+  {
+    "id": "justine-van-toor",
+    "name": "Justine van Toor",
+    "role": {
+      "en": "Pre-University",
+      "nl": "Pre-University"
+    },
+    "status": "current",
+    "joined": "09/2026",
+    "photo": "assets/mem/justine-van-toor.jpg",
+    "topic": "brain-behaviour",
+    "scholar": "",
+    "orcid": "",
+    "sample": false,
+    "timeline": [
+      {
+        "time": "2026",
+        "text": {
+          "en": "Nature of behaviour",
+          "nl": "Aard van gedrag"
+        },
+        "detailTitle": {
+          "en": "Lifespan smartphone behaviour",
+          "nl": "Smartphonegedrag over de levensloop"
+        },
+        "detail": {
+          "en": "I take an active, interdisciplinary role in shaping all aspects of the research.",
+          "nl": "Ik speel een actieve, interdisciplinaire rol bij het vormgeven van alle aspecten van het onderzoek."
+        }
+      }
+    ],
+    "tag": "Pre-University"
+  },
+  {
+    "id": "emma-blunt",
+    "name": "Emma Blunt",
+    "role": {
+      "en": "MSc Student",
+      "nl": "Masterstudent"
+    },
+    "status": "current",
+    "joined": "",
+    "photo": "",
+    "topic": "brain-behaviour",
+    "scholar": "",
+    "orcid": "",
+    "sample": false,
+    "timeline": [
+      {
+        "time": "2021",
+        "text": {
+          "en": "BSc Psychology",
+          "nl": "BSc Psychologie"
+        },
+        "detailTitle": {
+          "en": "Moved to the Netherlands for BSc",
+          "nl": "Naar Nederland verhuisd voor de bachelor"
+        },
+        "detail": {
+          "en": "Honours Bachelor Project on Social Anxiety in students.",
+          "nl": "Honours-bachelorproject over sociale angst bij studenten."
         }
       },
       {
-        "time": "",
+        "time": "2024",
         "text": {
-          "en": "Defence expected",
-          "nl": "Verdediging verwacht"
+          "en": "Became interested in processes within the brain",
+          "nl": "Raakte geïnteresseerd in processen in het brein"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "MSc in Cognitive Neuroscience",
+          "nl": "MSc in cognitieve neurowetenschappen"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "Internship and thesis at CodeLab, exploring ambulatory EEG devices and brain transitions during undirected behaviour.",
+          "nl": "Stage en scriptie bij CodeLab, waarin ik ambulante EEG-apparaten en hersentransities tijdens ongericht gedrag verken."
         }
       }
     ],
     "tag": "MSc Student"
   },
   {
-    "id": "alumnus-sample-01",
-    "name": "Sample Alumnus 01",
+    "id": "yikun-gao",
+    "name": "Yikun Gao",
     "role": {
-      "en": "Alumnus · project complete",
-      "nl": "Alumnus · project afgerond"
+      "en": "MSc Student",
+      "nl": "Masterstudent"
     },
-    "status": "alumni",
-    "joined": "",
-    "photo": "",
-    "topic": "lifetime",
+    "status": "current",
+    "joined": "03/2026",
+    "photo": "assets/mem/yikun-gao.jpg",
+    "topic": "brain-behaviour",
     "scholar": "",
     "orcid": "",
-    "sample": true,
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2026",
         "text": {
-          "en": "Joins as MSc student",
-          "nl": "Start als MSc-student"
+          "en": "Muse EEG experiment",
+          "nl": "Muse-EEG-experiment"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Can EEG band power detect changes in cognitive load when people change their typing rate?",
+          "nl": "Kan EEG-bandvermogen veranderingen in cognitieve belasting detecteren wanneer mensen hun typsnelheid veranderen?"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "Building on smartphone interaction and neural activity, I will examine how changes in typing speed relate to EEG band power, assessing its potential as an indicator of momentary cognitive load.",
+          "nl": "Voortbouwend op smartphone-interactie en neurale activiteit onderzoek ik hoe veranderingen in typsnelheid samenhangen met EEG-bandvermogen, en beoordeel ik de potentie daarvan als indicator van momentane cognitieve belasting."
         }
-      },
+      }
+    ],
+    "tag": "MSc Student"
+  },
+  {
+    "id": "enea-ceolini",
+    "name": "Enea Ceolini",
+    "role": {
+      "en": "Postdoctoral Researcher",
+      "nl": "Postdoctoraal onderzoeker"
+    },
+    "status": "alumni",
+    "joined": "01/2021",
+    "photo": "assets/mem/enea-ceolini.jpg",
+    "topic": "brain-behaviour",
+    "scholar": "https://scholar.google.com/citations?user=yJ8Q2XsAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0000-0002-2676-0804",
+    "sample": false,
+    "timeline": [
       {
-        "time": "",
+        "time": "2021",
         "text": {
-          "en": "Thesis on ageing and touch dynamics",
-          "nl": "Scriptie over veroudering en aanraakdynamiek"
+          "en": "Behavioural marker of age",
+          "nl": "Gedragsmarker voor leeftijd"
         },
         "detailTitle": {
-          "en": "What the project left behind",
-          "nl": "Wat het project heeft nagelaten"
+          "en": "Behavioural Age",
+          "nl": "Gedragsleeftijd"
         },
         "detail": {
-          "en": "Placeholder text — replace with the finished project and where the person went next.",
-          "nl": "Plaatsaanduiding — vervang door het afgeronde project en waar de persoon daarna heen ging."
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Project complete — leaves the group",
-          "nl": "Project afgerond — verlaat de groep"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
+          "en": "We tried to answer two important questions: Can one assess the aging status of an individual based on their behaviour? If yes, what can be said about the evolution over time of this status?",
+          "nl": "We probeerden twee belangrijke vragen te beantwoorden: kun je de verouderingsstatus van een persoon afleiden uit diens gedrag? En zo ja, wat valt er te zeggen over hoe die status zich in de loop van de tijd ontwikkelt?"
         }
       }
     ],
@@ -693,69 +666,90 @@
     ]
   },
   {
-    "id": "alumnus-sample-02",
-    "name": "Sample Alumnus 02",
+    "id": "matija-culjak",
+    "name": "Matija Čuljak",
     "role": {
-      "en": "Alumnus · project complete",
-      "nl": "Alumnus · project afgerond"
+      "en": "MSc Student",
+      "nl": "Masterstudent"
     },
     "status": "alumni",
-    "joined": "",
-    "photo": "",
+    "joined": "11/2021",
+    "photo": "assets/mem/matija-culjak.png",
     "topic": "patterns-over-time",
     "scholar": "",
-    "orcid": "",
-    "sample": true,
+    "orcid": "https://orcid.org/0000-0001-7718-7916",
+    "sample": false,
     "timeline": [
       {
-        "time": "",
+        "time": "2022",
         "text": {
-          "en": "Joins as research assistant",
-          "nl": "Start als onderzoeksassistent"
+          "en": "Smartphone behavior analysis (master's thesis)",
+          "nl": "Analyse van smartphonegedrag (masterscriptie)"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Effect of daylight saving time measured as impulse response in smartphone behavior",
+          "nl": "Het effect van de zomertijd, gemeten als impulsrespons in smartphonegedrag"
         },
         "detail": {
-          "en": "",
-          "nl": ""
+          "en": "I participated in project planning following an initial topic suggestion by Arko Ghosh. I formulated the research questions, authored the modeling and analysis code, and reported on all of the results as part of my master's thesis.",
+          "nl": "Ik nam deel aan de projectplanning na een eerste onderwerpsuggestie van Arko Ghosh. Ik formuleerde de onderzoeksvragen, schreef de modellerings- en analysecode en rapporteerde alle resultaten in mijn masterscriptie."
         }
       },
       {
-        "time": "",
+        "time": "2024",
         "text": {
-          "en": "Sleep data pipeline",
-          "nl": "Pijplijn voor slaapdata"
+          "en": "Smartphone behavior study",
+          "nl": "Studie naar smartphonegedrag"
         },
         "detailTitle": {
-          "en": "",
-          "nl": ""
+          "en": "Sleep-wake disruptions induced by daylight saving time transitions captured through ultra-long smartphone observations",
+          "nl": "Verstoringen van het slaap-waakritme door de overgang naar zomer- en wintertijd, vastgelegd met ultralange smartphonemetingen"
         },
         "detail": {
-          "en": "",
-          "nl": ""
-        }
-      },
-      {
-        "time": "",
-        "text": {
-          "en": "Project complete — leaves the group",
-          "nl": "Project afgerond — verlaat de groep"
-        },
-        "detailTitle": {
-          "en": "",
-          "nl": ""
-        },
-        "detail": {
-          "en": "",
-          "nl": ""
+          "en": "I developed the MATLAB and R data processing and causal impact modelling pipeline, as well as the final Python plotting and analysis code. I also contributed to the writing of the paper (methods and results).",
+          "nl": "Ik ontwikkelde de pijplijn in MATLAB en R voor dataverwerking en causal-impactmodellering, en de uiteindelijke Python-code voor grafieken en analyses. Daarnaast schreef ik mee aan het artikel (methoden en resultaten)."
         }
       }
     ],
     "tag": [
       "Alumni",
-      "Researcher"
+      "MSc Student"
+    ]
+  },
+  {
+    "id": "oyku-gurcan",
+    "name": "Öykü Gürcan",
+    "role": {
+      "en": "MSc Student",
+      "nl": "Masterstudent"
+    },
+    "status": "alumni",
+    "joined": "04/2024",
+    "photo": "assets/mem/oyku-gurcan.jpg",
+    "topic": "brain-behaviour",
+    "scholar": "",
+    "orcid": "https://orcid.org/0000-0002-3280-1481",
+    "sample": false,
+    "timeline": [
+      {
+        "time": "2024",
+        "text": {
+          "en": "Research Master Thesis",
+          "nl": "Researchmasterscriptie"
+        },
+        "detailTitle": {
+          "en": "Correlates of Inter-Individual Differences in Beta Oscillations During Smartphone Tapping Behavior: Age and Tapping Patterns",
+          "nl": "Correlaten van individuele verschillen in bèta-oscillaties tijdens het tikken op de smartphone: leeftijd en tikpatronen"
+        },
+        "detail": {
+          "en": "I contributed to the research question, analysis, and writing. I am currently in the process of publishing this work as a research report.",
+          "nl": "Ik droeg bij aan de onderzoeksvraag, de analyse en het schrijven. Op dit moment werk ik aan de publicatie van dit werk als onderzoeksrapport."
+        }
+      }
+    ],
+    "tag": [
+      "Alumni",
+      "MSc Student"
     ]
   }
 ]
