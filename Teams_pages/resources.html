@@ -48,7 +48,7 @@
 <main>
 
 <!-- RESOURCES: Publications → Patents → Data → Code
-     Cards are filled from data/team.json (Scholar/ORCID links) and data/resources.json -->
+     Cards are filled from data/team.json (Arko Ghosh's Scholar/ORCID links only) and data/resources.json -->
 <section class="resources-section">
   <div class="wrap">
 
@@ -182,12 +182,14 @@ CodeLabData.load(['team', 'resources']).then(function (data) {
     else document.getElementById(block).remove();
   }
 
-  /* Publications: every team member's Google Scholar / ORCID link */
+  /* Publications: only the PI's Google Scholar / ORCID links (team member with this id).
+     Other members' links stay in data/team.json for the Team page. */
+  var PUBLICATIONS_ID = 'arko-ghosh';
   if (!data.team) {
     D.showError(grid('publications'));
   } else {
     var pubs = [];
-    data.team.forEach(function (m) {
+    data.team.filter(function (m) { return m.id === PUBLICATIONS_ID; }).forEach(function (m) {
       var name = '>' + D.esc(m.name);
       if (m.scholar) pubs.push(card(m.scholar, 'srcScholar', name, ' data-i18n="scholarDesc">', 'viewProfile', pubs.length));
       if (m.orcid) pubs.push(card(m.orcid, 'srcOrcid', name, ' data-i18n="orcidDesc">', 'viewProfile', pubs.length));
